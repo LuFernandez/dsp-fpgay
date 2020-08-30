@@ -1,0 +1,5 @@
+Indicar el estado final de los registros
+x 	= a00000 | a00000
+y 	= a00000 | 000000
+r7	= $0000
+ccr 	= b 0000 0000
