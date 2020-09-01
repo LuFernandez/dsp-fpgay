@@ -21,8 +21,7 @@ vect_max		move	x:(r0)+,a			;Tomo el primer elemento del vector A
 				cmpm	b,a		;Comparo los modulos de los elementos
 				tge	a,b 					
 				move	b,y:(r4)+				;Guardo el de mayor modulo en B
-				move	x:(r0)+,a 
-				move	y:(r4),b
+				move	x:(r0)+,a y:(r4),b
 			.ENDL
 			rts
 
