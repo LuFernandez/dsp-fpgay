@@ -1,0 +1,15 @@
+En primer lugar, los archivos ada_equ.asm, ioequ.asm, intequ.asm son constantes para inicializar el CS4218, puertos y registros I/O e interrupcionesdel DSP56307, respectivamente.
+En cuanto al codec, su main es caniost.asm; primero configura el PLL, habilita interrupciones y resetea el stack pointer.
+A continuación inicializa el codec en la subrutina ada_init que se encuentra en ada_init.asm.
+
+ada_init:
+resetea las interrupciones del puerto E de SSI (Synchronous Serial Interface).
+en el control register A modifica la frecuencia del clock.
+Configura pines GPIO de salida.
+Resetea el codec 
+(...)
+
+
+Interrupciones: 
+cuando llega una interrupcion es atendida en interrupts.asm, en left_ch	y right_ch, 
+con los callbacks de interrupcion en caniost.asm donde se puede analizar de manera diferente cada canal
