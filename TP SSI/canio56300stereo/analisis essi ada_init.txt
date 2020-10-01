@@ -1,0 +1,67 @@
+En primer lugar, los archivos ada_equ.asm, ioequ.asm, intequ.asm son constantes para inicializar el CS4218, puertos y registros I/O e interrupcionesdel DSP56307, respectivamente.
+En cuanto al codec, su main es caniost.asm; primero configura el PLL, habilita interrupciones y resetea el stack pointer.
+A continuación inicializa el codec en la subrutina ada_init que se encuentra en ada_init.asm.
+
+ada_init:
+-resetea los puertos ESSI0 y ESSI1 (Enhanced Synchronous Serial Interface).
+
+-en el control register A= $101807(CRA, 24 bits):
+	-bits [7:0]: setea prescaler modulus (elige 8)
+	-bits [10:8]: estan reservados
+	-bit 11: prescaler range, se usa cuando se requiere un clock lento, en este caso, al estar seteado este presacler se bypassea.
+	-bit [16-12]: en modo network, el seleccionado, estos bits señalan el numero de palabras por frame menos uno.
+El caso 00000 sería el envío continuo de palabras, en este caso, el frame rate divider es 2.
+	-bit 17: reservado
+	-bit 18: alignment control: las palabras recibidas están alineadas a la izquierda (left- aligned) al MSB (bit 23); y las transmitidas deben estar alineadas a la izquierda en el transmit register. Esto es porque se eligen palabras de 16 bits y el ESSI maneja data de 24 bits, entonces, al ser la palabra de menos de 24 bits, la data debe estar alineada al MSB.
+	-bits [21-19]: word length a transmitir. 010-> 16bit word length
+	-bit 22: Select SC1 (SSC1) = 0, entonces está en modo sincrónico (SYN = 1) y el transmisor 2 (TE2=0), luego SC1 actúa como el flag I/O serial mientras que la señal SC1 se configura como salida (SCD1=1)
+	-bit 23: reservado
+
+-en el control register B= $2b330c(CRB, 24 bits):
+	-bits [16:14]: selecciona los canales de transmision: TE2=0, TE1=0, TE0=1. Enable transfer data de TX1 para transmitir el shift register 0. El TE0 funciona tanto en modo sincrónico como en asincrónico.
+	-bits [1:0]: output flags
+		-bit 1 (OF1): como el ESSI esta en modo sincrónico y TE2=0, configurado antes; la señal SC1 está como el flag1 de ESSI. Además como SCD1=1, configurado antes; la señal SC1 está como salida, output. La data presente en el bit OF1 se escribe a SC1 al comienzo del próximo time slot, al estar en network mode.
+		-bit 0 (OF0): como el ESSI esta en modo sincrónico y TE1=0, configurado antes; la señal SC0 está como el flag0 de ESSI. Además como SCD0=1, configurado antes; la señal SC0 está como salida, output. La data presente en el bit OF0 se escribe a SC0 al comienzo del próximo time slot, al estar en network mode.
+	-bit 2 Serial Control Direction 0(SCD0): al estar seteado en 1, SC0 es output.
+	-bit 3 Serial Control Direction 1(SCD1): al estar seteado en 1, SC1 es output.
+	-bit 4 serial control direction 2(SCD2): está en 0, por lo que SC2 es input.
+	-bit 5 Clock Source Direction (SCKD): está en 0, por lo que el clock externo está seleccionado.
+	-bit 6 Shift Direction (SHFD): determina la direccion de shift del shift register que transmite o recibe. Está seteado en 0, por lo que se shiftea el MSB primero.
+	-bits [8-7] frame sync length FSL[1:0]: el tamaño del frame sync a generar. 
+	-bit 9 FSR: el word length del frame sync ocurre un ciclo de clock antes
+	-bit 10 FSP:frame sync polarity positiva. El inicio del frame es indicado por la señal del frame sync estando en alto.
+	-bit 12 SYN: el bit está en 1, por lo que está en modo sincronico. Las secciones de transmision y recepcion usan las señales de clock y frame sync.
+	-bit 13 MOD: esta en 1, esta en modo network.
+	-bit 17 Receive Enable (RE): está habilitado para recibir 
+	-bit 18 transmit interrupt enable (TIE): disabled (=0)
+	-biit 19 receive interrupt enable (RIE): interrupt enabled.
+	-bit 20 transmit last slot interrupt enable (TLIE): disabled, disabled the interrupt at the beginning of the last slot of a frame.
+	-bit 21 receive last slot interrupt enable (RLIE): disabled, disabled the interrupt after the last slot of a frame ends.
+	-bits 22 y 23 transmit/receive exception interrupt enable (TEIE/REIE): deshabilita interrupciones cuando TDE y TUE estan seteados en el status register; y para el receive, las desahibilita cuando RDF y ROE estan seteados en el status register.
+
+
+A continuación, en el port control register (PCR), los clearea todos, por lo que los habilita como GPIO. Y en el port direction register (PRR) habilita como output 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+Interrupciones: 
+cuando llega una interrupcion es atendida en interrupts.asm, en left_ch	y right_ch, 
+con los callbacks de interrupcion en caniost.asm donde se puede analizar de manera diferente cada canal
