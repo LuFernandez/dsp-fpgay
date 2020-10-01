@@ -61,6 +61,8 @@ Pone en cero el bit 0 del PDR (CODEC_RESET~) el codec lo recibe negado, por lo q
 
 
 
+
+
 	
 
 
