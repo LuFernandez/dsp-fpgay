@@ -40,7 +40,9 @@ El caso 00000 sería el envío continuo de palabras, en este caso, el frame rate
 	-bits 22 y 23 transmit/receive exception interrupt enable (TEIE/REIE): deshabilita interrupciones cuando TDE y TUE estan seteados en el status register; y para el receive, las desahibilita cuando RDF y ROE estan seteados en el status register.
 
 
-A continuación, en el port control register (PCR), los clearea todos, por lo que los habilita como GPIO. Y en el port direction register (PRR) habilita como output 
+A continuación, en el port control register (PCR), los clearea todos, por lo que los habilita como GPIO tanto en ESSI0 y ESSI1. Y en el port direction register (PRR) habilita como output el SC10, SC11, y SC12 para las señales de clock, cdin y ccs.
+
+Pone en cero el bit 0 del PDR (CODEC_RESET~) el codec lo recibe negado, por lo que se resetea. Mismo con la señal de CCS (control data chip select) que la recibe negada.
 
 
 
