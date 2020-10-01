@@ -43,6 +43,11 @@ El caso 00000 sería el envío continuo de palabras, en este caso, el frame rate
 A continuación, en el port control register (PCR), los clearea todos, por lo que los habilita como GPIO tanto en ESSI0 y ESSI1. Y en el port direction register (PRR) habilita como output el SC10, SC11, y SC12 para las señales de clock, cdin y ccs.
 
 Pone en cero el bit 0 del PDR (CODEC_RESET~) el codec lo recibe negado, por lo que se resetea. Mismo con la señal de CCS (control data chip select) que la recibe negada.
+Luego de esto se efectua un delay de aproximadamente 50ms para dar tiempo a que el codec se reinice y se pone en 1 el bit 0 del PDR (CODEC_RESET~), lo que quiere decir que se realiza un deassert del RESET.
+
+-Se cargan en memoria la control word 12(HIGH) y control word 34(LOW), y se llama dos veces a la subrutina codec_control.En el primer llamado se manda un dummy (debido a que esta en modo MS4)al codec y en el segundo el mensaje real.
+-
+
 
 
 
