@@ -21,6 +21,4 @@ Resetea el codec
 (...)
 
 
-Interrupciones: 
-cuando llega una interrupcion es atendida en interrupts.asm, en left_ch	y right_ch, 
-con los callbacks de interrupcion en caniost.asm donde se puede analizar de manera diferente cada canal
+
