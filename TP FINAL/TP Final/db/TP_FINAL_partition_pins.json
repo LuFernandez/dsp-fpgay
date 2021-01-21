@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "scl",
+					"strict" : false
+				},
+				{
+					"name" : "sda",
+					"strict" : false
+				},
+				{
+					"name" : "reset_test",
+					"strict" : false
+				},
+				{
+					"name" : "I2S_CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "I2S_WS",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				},
+				{
+					"name" : "I2S_TX_DATA",
+					"strict" : false
+				},
+				{
+					"name" : "pack_end",
+					"strict" : false
+				},
+				{
+					"name" : "GENERAL_CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "i2s_en",
+					"strict" : false
+				},
+				{
+					"name" : "CK_50M",
+					"strict" : false
+				},
+				{
+					"name" : "I2S_RX_DATA",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,64 @@
+--------------------------------------------------------------------------------
+--
+--   FileName:         i2c_master.vhd
+--   Dependencies:     none
+--   Design Software:  Quartus II 64-bit Version 13.1 Build 162 SJ Full Version
+--
+--   HDL CODE IS PROVIDED "AS IS."  DIGI-KEY EXPRESSLY DISCLAIMS ANY
+--   WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
+--   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+--   PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL DIGI-KEY
+--   BE LIABLE FOR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL
+--   DAMAGES, LOST PROFITS OR LOST DATA, HARM TO YOUR EQUIPMENT, COST OF
+--   PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR SERVICES, ANY CLAIMS
+--   BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF),
+--   ANY CLAIMS FOR INDEMNITY OR CONTRIBUTION, OR OTHER SIMILAR COSTS.
+--
+--   Version History
+--   Version 1.0 11/01/2012 Scott Larson
+--     Initial Public Release
+--   Version 2.0 06/20/2014 Scott Larson
+--     Added ability to interface with different slaves in the same transaction
+--     Corrected ack_error bug where ack_error went 'Z' instead of '1' on error
+--     Corrected timing of when ack_error signal clears
+--   Version 2.1 10/21/2014 Scott Larson
+--     Replaced gated clock with clock enable
+--     Adjusted timing of SCL during start and stop conditions
+--   Version 2.2 02/05/2015 Scott Larson
+--     Corrected small SDA glitch introduced in version 2.1
+-- 
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY rst_delay IS
+  PORT(
+    clk       : IN     STD_LOGIC;                    --system clock
+    reset_n   : OUT     STD_LOGIC);                    --active low reset
+END rst_delay;
+
+ARCHITECTURE logic OF rst_delay IS
+
+SIGNAL reset_tmp : STD_LOGIC := '0';
+
+BEGIN
+
+  --generate the timing for the bus clock (scl_clk) and the data clock (data_clk)
+  PROCESS(clk)
+    VARIABLE count  :  INTEGER RANGE 0 TO 25000 := 0;  --timing for clock generation
+  BEGIN
+    IF(clk'EVENT AND clk = '1') THEN
+    CASE count IS
+		WHEN 0 TO 20000 =>
+			count := count + 1;
+		WHEN OTHERS =>
+			reset_tmp <= '1';
+	 END CASE;
+	 reset_n <= reset_tmp;
+	 END IF;
+  END PROCESS;
+
+  
+END logic;

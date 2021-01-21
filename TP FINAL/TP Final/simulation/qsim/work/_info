@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/simulation/qsim
+Ehard_block
+Z1 w1610828527
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+R0
+Z8 8TP_FINAL.vho
+Z9 FTP_FINAL.vho
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1610828540
+!i10b 1
+Z12 !s108 1610828539.000000
+Z13 !s90 -work|work|TP_FINAL.vho|
+Z14 !s107 TP_FINAL.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Etp_final
+Z17 w1610836381
+R3
+R7
+R2
+Z18 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+R4
+R5
+R6
+Z19 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+R8
+R9
+l0
+L36
+V3gU358:92_Hl[FKagI;i40
+!s100 @2SF6z:Y<EfBd?BX2^gBi2
+R10
+32
+Z20 !s110 1610836382
+!i10b 1
+Z21 !s108 1610836382.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R18
+R4
+R5
+R6
+R19
+DEx4 work 8 tp_final 0 22 3gU358:92_Hl[FKagI;i40
+l205
+L60
+VmbDaZTXhFmEY>MNZX7>N51
+!s100 UjMGc0FnjoDIN2]1^K[J70
+R10
+32
+R20
+!i10b 1
+R21
+R13
+R14
+!i113 1
+R15
+R16
+Etp_final_vhd_vec_tst
+Z22 w1610836376
+R5
+R6
+R0
+Z23 8Waveform9.vwf.vht
+Z24 FWaveform9.vwf.vht
+l0
+L31
+VD;i?jl4;9aDLMMh[<d5TO2
+!s100 oWIhCJ?DKOo4aV?21Qa1k1
+R10
+32
+R20
+!i10b 1
+R21
+Z25 !s90 -work|work|Waveform9.vwf.vht|
+Z26 !s107 Waveform9.vwf.vht|
+!i113 1
+R15
+R16
+Atp_final_arch
+R5
+R6
+Z27 DEx4 work 20 tp_final_vhd_vec_tst 0 22 D;i?jl4;9aDLMMh[<d5TO2
+l56
+L33
+VdD9ScS;gR]^WiIRHM>m;80
+!s100 9Eodb6fG7Jj0lj03Cl>f;2
+R10
+32
+R20
+!i10b 1
+R21
+R25
+R26
+!i113 1
+R15
+R16

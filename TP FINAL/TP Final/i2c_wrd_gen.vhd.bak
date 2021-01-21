@@ -1,0 +1,48 @@
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY i2c_wrd_gen IS
+  PORT(
+    clk       	: IN     STD_LOGIC;                    --system clock
+	 pack_end	: IN		STD_LOGIC;
+	 d_wr			: OUT		STD_LOGIC_VECTOR(7 DOWNTO 0);
+	 d_wr2		: OUT		STD_LOGIC_VECTOR(7 DOWNTO 0);
+	 d_wr3		: OUT		STD_LOGIC_VECTOR(7 DOWNTO 0);
+	 rw			: OUT		STD_LOGIC;
+	 address   	: OUT		STD_LOGIC_VECTOR(6 DOWNTO 0));
+END i2c_wrd_gen;
+
+ARCHITECTURE logic OF i2c_wrd_gen IS
+
+
+BEGIN
+
+  --Espero un rato para prender el reset del integrado
+  PROCESS(clk,pack_end)
+    VARIABLE count  :  INTEGER RANGE 0 TO 10 := 0;  --timing for clock generation
+  BEGIN
+	 IF (pack_end'EVENT AND pack_end = '1') THEN
+		count := count +1;
+	 END IF;
+    IF(clk'EVENT AND clk = '1') THEN
+    CASE count1 IS
+		WHEN 0 =>
+			d_wr 		<= '00000000';
+			d_wr2 	<= '00001111';
+			d_wr3 	<= '00110011';
+			rw 		<= '0';
+			address 	<= '0011000';
+		WHEN 1	=>
+			d_wr 		<= '00000000';
+			d_wr2 	<= '00001111';
+			d_wr3 	<= '00110011';
+			rw 		<= '1';
+			address 	<= '0011000';
+	 END CASE;
+	 END IF;
+  END PROCESS;
+  
+END logic;

@@ -1,0 +1,72 @@
+# do TP_FINAL.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:33:02 on Jan 16,2021
+# vcom -work work TP_FINAL.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity TP_FINAL
+# -- Compiling architecture structure of TP_FINAL
+# End time: 19:33:02 on Jan 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:33:02 on Jan 16,2021
+# vcom -work work Waveform9.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity TP_FINAL_vhd_vec_tst
+# -- Compiling architecture TP_FINAL_arch of TP_FINAL_vhd_vec_tst
+# End time: 19:33:02 on Jan 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.TP_FINAL_vhd_vec_tst 
+# Start time: 19:33:03 on Jan 16,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tp_final_vhd_vec_tst(tp_final_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.tp_final(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_pllpack(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading cycloneive.cycloneive_pll(vital_pll)
+# Loading cycloneive.cycloneive_mn_cntr(behave)
+# Loading cycloneive.cycloneive_scale_cntr(behave)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 20268 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#33
+# ** Note: Cycloneive PLL locked to incoming clock
+#    Time: 90 ns  Iteration: 3  Instance: /tp_final_vhd_vec_tst/i1/\inst4|altpll_component|auto_generated|pll1\
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 5355000 ps
+# Simulation time: 80541666 ps
+# Simulation time: 80541666 ps
+# ** Note: Cycloneive PLL lost lock due to loss of input clock or the input clock is not detected within the allowed time frame.
+#    Time: 100030 ns  Iteration: 3  Instance: /tp_final_vhd_vec_tst/i1/\inst4|altpll_component|auto_generated|pll1\
+# End time: 19:33:29 on Jan 16,2021, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 1

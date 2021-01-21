@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CK_50M'
+Slack : -5.130
+TNS   : -883.017
+
+Type  : Slow 1200mV 85C Model Setup 'i2c_cntrl:inst3|pack_end'
+Slack : -0.061
+TNS   : -0.118
+
+Type  : Slow 1200mV 85C Model Hold 'CK_50M'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'i2c_cntrl:inst3|pack_end'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CK_50M'
+Slack : -1.785
+TNS   : -270.205
+
+Type  : Slow 1200mV 85C Model Removal 'CK_50M'
+Slack : 0.893
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CK_50M'
+Slack : -3.000
+TNS   : -256.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i2c_cntrl:inst3|pack_end'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'CK_50M'
+Slack : -4.457
+TNS   : -770.154
+
+Type  : Slow 1200mV 0C Model Setup 'i2c_cntrl:inst3|pack_end'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CK_50M'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'i2c_cntrl:inst3|pack_end'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CK_50M'
+Slack : -1.472
+TNS   : -218.417
+
+Type  : Slow 1200mV 0C Model Removal 'CK_50M'
+Slack : 0.803
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CK_50M'
+Slack : -3.000
+TNS   : -256.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i2c_cntrl:inst3|pack_end'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'CK_50M'
+Slack : -2.439
+TNS   : -386.699
+
+Type  : Fast 1200mV 0C Model Setup 'i2c_cntrl:inst3|pack_end'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CK_50M'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'i2c_cntrl:inst3|pack_end'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CK_50M'
+Slack : -0.635
+TNS   : -85.472
+
+Type  : Fast 1200mV 0C Model Removal 'CK_50M'
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CK_50M'
+Slack : -3.000
+TNS   : -272.428
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i2c_cntrl:inst3|pack_end'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------
