@@ -39,7 +39,7 @@ USE IEEE.std_logic_1164.ALL;
 USE IEEE.numeric_std.ALL;
 USE work.delay_module_pkg.ALL;
 
-ENTITY delay_module IS
+ENTITY delay_mod IS
   PORT( clk                               :   IN    std_logic;
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
@@ -48,10 +48,10 @@ ENTITY delay_module IS
         ce_out                            :   OUT   std_logic;
         Out1                              :   OUT   std_logic_vector(15 DOWNTO 0)  -- int16
         );
-END delay_module;
+END delay_mod;
 
 
-ARCHITECTURE rtl OF delay_module IS
+ARCHITECTURE rtl OF delay_mod IS
 
   -- Signals
   SIGNAL enb                              : std_logic;

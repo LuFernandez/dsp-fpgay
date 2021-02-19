@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP_FINAL
-Wed Jan 20 21:43:17 2021
+Fri Feb 19 18:18:09 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,17 +13,22 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |TP_FINAL|i2c_master:inst|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: i2c_master:inst
- 15. Parameter Settings for User Entity Instance: i2s_transceiver:inst1
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |TP_FINAL|i2c_master:inst|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated|altsyncram_0r81:altsyncram2
+ 17. Parameter Settings for User Entity Instance: i2c_master:inst
+ 18. Parameter Settings for User Entity Instance: i2s_transceiver:inst1
+ 19. Parameter Settings for Inferred Entity Instance: delay_mod:inst4|altshift_taps:Delay_reg_rtl_0
+ 20. altshift_taps Parameter Settings by Entity Instance
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -49,18 +54,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 20 21:43:17 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Feb 19 18:18:09 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TP_FINAL                                    ;
 ; Top-level Entity Name              ; TP_FINAL                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 449                                         ;
-;     Total combinational functions  ; 374                                         ;
-;     Dedicated logic registers      ; 257                                         ;
-; Total registers                    ; 257                                         ;
+; Total logic elements               ; 476                                         ;
+;     Total combinational functions  ; 401                                         ;
+;     Dedicated logic registers      ; 269                                         ;
+; Total registers                    ; 269                                         ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 65,504                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -170,17 +175,28 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; i2s_transceiver.vhd              ; yes             ; User VHDL File                     ; D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2s_transceiver.vhd ;         ;
-; i2C/i2c_master.vhd               ; yes             ; User VHDL File                     ; D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2C/i2c_master.vhd  ;         ;
-; TP_FINAL.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/TP_FINAL.bdf        ;         ;
-; i2c_cntrl.vhd                    ; yes             ; User VHDL File                     ; D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd       ;         ;
-; i2c_wrd_gen.vhd                  ; yes             ; User VHDL File                     ; D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_wrd_gen.vhd     ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; ../audio effects/hdlsrc/delay/delay_module_var.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_var.vhd ;         ;
+; ../audio effects/hdlsrc/delay/delay_module_pkg.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_pkg.vhd ;         ;
+; i2s_transceiver.vhd                                ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd                    ;         ;
+; i2C/i2c_master.vhd                                 ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd                     ;         ;
+; TP_FINAL.bdf                                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/TP_FINAL.bdf                           ;         ;
+; i2c_cntrl.vhd                                      ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd                          ;         ;
+; i2c_wrd_gen.vhd                                    ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd                        ;         ;
+; altshift_taps.tdf                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift_taps.tdf                            ;         ;
+; altdpram.inc                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
+; lpm_counter.inc                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc                              ;         ;
+; lpm_compare.inc                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc                              ;         ;
+; lpm_constant.inc                                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc                             ;         ;
+; db/shift_taps_cbm.tdf                              ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_cbm.tdf                  ;         ;
+; db/altsyncram_0r81.tdf                             ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_0r81.tdf                 ;         ;
+; db/cntr_lvf.tdf                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_lvf.tdf                        ;         ;
+; db/cmpr_9ic.tdf                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_9ic.tdf                        ;         ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -188,45 +204,61 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 449          ;
+; Estimated Total logic elements              ; 476          ;
 ;                                             ;              ;
-; Total combinational functions               ; 374          ;
+; Total combinational functions               ; 401          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 150          ;
-;     -- 3 input functions                    ; 70           ;
-;     -- <=2 input functions                  ; 154          ;
+;     -- 4 input functions                    ; 185          ;
+;     -- 3 input functions                    ; 83           ;
+;     -- <=2 input functions                  ; 133          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 278          ;
-;     -- arithmetic mode                      ; 96           ;
+;     -- normal mode                          ; 293          ;
+;     -- arithmetic mode                      ; 108          ;
 ;                                             ;              ;
-; Total registers                             ; 257          ;
-;     -- Dedicated logic registers            ; 257          ;
+; Total registers                             ; 269          ;
+;     -- Dedicated logic registers            ; 269          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 13           ;
+; Total memory bits                           ; 65504        ;
 ;                                             ;              ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; CK_50M~input ;
 ; Maximum fan-out                             ; 254          ;
-; Total fan-out                               ; 2085         ;
-; Average fan-out                             ; 3.17         ;
+; Total fan-out                               ; 2468         ;
+; Average fan-out                             ; 3.47         ;
 +---------------------------------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-----------------+--------------+
-; |TP_FINAL                  ; 374 (0)             ; 257 (0)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |TP_FINAL                       ; TP_FINAL        ; work         ;
-;    |i2c_cntrl:inst3|       ; 106 (106)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_cntrl:inst3       ; i2c_cntrl       ; work         ;
-;    |i2c_master:inst|       ; 81 (81)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_master:inst       ; i2c_master      ; work         ;
-;    |i2c_wrd_gen:inst2|     ; 11 (11)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_wrd_gen:inst2     ; i2c_wrd_gen     ; work         ;
-;    |i2s_transceiver:inst1| ; 176 (176)           ; 163 (163)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2s_transceiver:inst1 ; i2s_transceiver ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-----------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |TP_FINAL                                 ; 401 (0)             ; 269 (0)                   ; 65504       ; 0            ; 0       ; 0         ; 13   ; 0            ; |TP_FINAL                                                                                                           ; TP_FINAL        ; work         ;
+;    |delay_mod:inst4|                      ; 29 (0)              ; 12 (0)                    ; 65504       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst4                                                                                           ; delay_mod       ; work         ;
+;       |altshift_taps:Delay_reg_rtl_0|     ; 29 (0)              ; 12 (0)                    ; 65504       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst4|altshift_taps:Delay_reg_rtl_0                                                             ; altshift_taps   ; work         ;
+;          |shift_taps_cbm:auto_generated|  ; 29 (0)              ; 12 (0)                    ; 65504       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated                               ; shift_taps_cbm  ; work         ;
+;             |altsyncram_0r81:altsyncram2| ; 0 (0)               ; 0 (0)                     ; 65504       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated|altsyncram_0r81:altsyncram2   ; altsyncram_0r81 ; work         ;
+;             |cntr_lvf:cntr1|              ; 29 (25)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated|cntr_lvf:cntr1                ; cntr_lvf        ; work         ;
+;                |cmpr_9ic:cmpr4|           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated|cntr_lvf:cntr1|cmpr_9ic:cmpr4 ; cmpr_9ic        ; work         ;
+;    |i2c_cntrl:inst3|                      ; 106 (106)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_cntrl:inst3                                                                                           ; i2c_cntrl       ; work         ;
+;    |i2c_master:inst|                      ; 81 (81)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_master:inst                                                                                           ; i2c_master      ; work         ;
+;    |i2c_wrd_gen:inst2|                    ; 11 (11)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_wrd_gen:inst2                                                                                         ; i2c_wrd_gen     ; work         ;
+;    |i2s_transceiver:inst1|                ; 174 (174)           ; 163 (163)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2s_transceiver:inst1                                                                                     ; i2s_transceiver ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                        ;
++--------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++--------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated|altsyncram_0r81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4094         ; 16           ; 4094         ; 16           ; 65504 ; None ;
++--------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
 Encoding Type:  One-Hot
@@ -294,7 +326,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 257   ;
+; Total registers                              ; 269   ;
 ; Number of registers using Synchronous Clear  ; 46    ;
 ; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 188   ;
@@ -319,6 +351,18 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
++-------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                              ;
++--------------------------------------------+---------------------------------+------------+
+; Register Name                              ; Megafunction                    ; Type       ;
++--------------------------------------------+---------------------------------+------------+
+; delay_mod:inst43|Delay_reg[0..1023][0..15] ; delay_mod:inst4|Delay_reg_rtl_0 ; SHIFT_TAPS ;
+; delay_mod:inst30|Delay_reg[0..1023][0..15] ; delay_mod:inst4|Delay_reg_rtl_0 ; SHIFT_TAPS ;
+; delay_mod:inst5|Delay_reg[0..1023][0..15]  ; delay_mod:inst4|Delay_reg_rtl_0 ; SHIFT_TAPS ;
+; delay_mod:inst4|Delay_reg[0..1023][0..15]  ; delay_mod:inst4|Delay_reg_rtl_0 ; SHIFT_TAPS ;
++--------------------------------------------+---------------------------------+------------+
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
@@ -330,6 +374,15 @@ Encoding Type:  One-Hot
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TP_FINAL|i2c_cntrl:inst3|data_wr[0]              ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TP_FINAL|i2c_master:inst|bit_cnt[0]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for delay_mod:inst4|altshift_taps:Delay_reg_rtl_0|shift_taps_cbm:auto_generated|altsyncram_0r81:altsyncram2 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                               ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -355,33 +408,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: delay_mod:inst4|altshift_taps:Delay_reg_rtl_0 ;
++----------------+----------------+--------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                         ;
++----------------+----------------+--------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                      ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                      ;
+; TAP_DISTANCE   ; 4096           ; Untyped                                                      ;
+; WIDTH          ; 16             ; Untyped                                                      ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                      ;
+; CBXI_PARAMETER ; shift_taps_cbm ; Untyped                                                      ;
++----------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                        ;
++----------------------------+-----------------------------------------------+
+; Name                       ; Value                                         ;
++----------------------------+-----------------------------------------------+
+; Number of entity instances ; 1                                             ;
+; Entity Instance            ; delay_mod:inst4|altshift_taps:Delay_reg_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                             ;
+;     -- TAP_DISTANCE        ; 4096                                          ;
+;     -- WIDTH               ; 16                                            ;
++----------------------------+-----------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 257                         ;
+; cycloneiii_ff         ; 269                         ;
 ;     CLR               ; 12                          ;
 ;     CLR SCLR          ; 32                          ;
 ;     ENA               ; 32                          ;
 ;     ENA CLR           ; 144                         ;
 ;     ENA SCLR          ; 14                          ;
 ;     ENA SLD           ; 5                           ;
-;     plain             ; 18                          ;
+;     plain             ; 30                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 376                         ;
-;     arith             ; 96                          ;
-;         2 data inputs ; 93                          ;
+; cycloneiii_lcell_comb ; 403                         ;
+;     arith             ; 108                         ;
+;         2 data inputs ; 105                         ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 280                         ;
+;     normal            ; 295                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 51                          ;
-;         3 data inputs ; 67                          ;
-;         4 data inputs ; 150                         ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 80                          ;
+;         4 data inputs ; 185                         ;
+; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.10                        ;
-; Average LUT depth     ; 4.54                        ;
+; Max LUT depth         ; 10.70                       ;
+; Average LUT depth     ; 4.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -390,7 +473,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -400,45 +483,86 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jan 20 21:42:51 2021
+    Info: Processing started: Fri Feb 19 18:17:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP_FINAL -c TP_FINAL
 Warning (125092): Tcl Script File PLL.qip not found
     Info (125063): set_global_assignment -name QIP_FILE PLL.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/delay/delay_module_var.vhd
+    Info (12022): Found design unit 1: delay_mod-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_var.vhd Line: 54
+    Info (12023): Found entity 1: delay_mod File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_var.vhd Line: 42
+Info (12021): Found 1 design units, including 0 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/delay/delay_module_pkg.vhd
+    Info (12022): Found design unit 1: delay_module_pkg File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_pkg.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/delay/delay_module.vhd
+    Info (12022): Found design unit 1: delay_module-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module.vhd Line: 53
+    Info (12023): Found entity 1: delay_module File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file i2s_transceiver.vhd
-    Info (12022): Found design unit 1: i2s_transceiver-logic File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2s_transceiver.vhd Line: 44
-    Info (12023): Found entity 1: i2s_transceiver File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2s_transceiver.vhd Line: 26
+    Info (12022): Found design unit 1: i2s_transceiver-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd Line: 44
+    Info (12023): Found entity 1: i2s_transceiver File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd Line: 26
 Info (12021): Found 2 design units, including 0 entities, in source file fpga-i2c-slave-master/txt_util.vhd
-    Info (12022): Found design unit 1: txt_util File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/FPGA-I2C-Slave-master/txt_util.vhd Line: 6
-    Info (12022): Found design unit 2: txt_util-body File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/FPGA-I2C-Slave-master/txt_util.vhd Line: 89
+    Info (12022): Found design unit 1: txt_util File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/FPGA-I2C-Slave-master/txt_util.vhd Line: 6
+    Info (12022): Found design unit 2: txt_util-body File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/FPGA-I2C-Slave-master/txt_util.vhd Line: 89
 Info (12021): Found 2 design units, including 1 entities, in source file fpga-i2c-slave-master/debounce.vhd
-    Info (12022): Found design unit 1: debounce-arch File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/FPGA-I2C-Slave-master/debounce.vhd Line: 25
-    Info (12023): Found entity 1: debounce File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/FPGA-I2C-Slave-master/debounce.vhd Line: 16
+    Info (12022): Found design unit 1: debounce-arch File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/FPGA-I2C-Slave-master/debounce.vhd Line: 25
+    Info (12023): Found entity 1: debounce File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/FPGA-I2C-Slave-master/debounce.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file fpga-i2c-slave-master/i2c_slave.vhd
-    Info (12022): Found design unit 1: I2C_slave-arch File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/FPGA-I2C-Slave-master/I2C_slave.vhd Line: 27
-    Info (12023): Found entity 1: I2C_slave File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/FPGA-I2C-Slave-master/I2C_slave.vhd Line: 12
+    Info (12022): Found design unit 1: I2C_slave-arch File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/FPGA-I2C-Slave-master/I2C_slave.vhd Line: 27
+    Info (12023): Found entity 1: I2C_slave File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/FPGA-I2C-Slave-master/I2C_slave.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file i2c/i2c_master.vhd
-    Info (12022): Found design unit 1: i2c_master-logic File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2C/i2c_master.vhd Line: 54
-    Info (12023): Found entity 1: i2c_master File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2C/i2c_master.vhd Line: 36
+    Info (12022): Found design unit 1: i2c_master-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 54
+    Info (12023): Found entity 1: i2c_master File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file tp_final.bdf
     Info (12023): Found entity 1: TP_FINAL
 Info (12021): Found 1 design units, including 1 entities, in source file temp.v
-    Info (12023): Found entity 1: Temp File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/Temp.v Line: 39
+    Info (12023): Found entity 1: Temp File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/Temp.v Line: 39
 Info (12021): Found 2 design units, including 1 entities, in source file rst_delay.vhd
-    Info (12022): Found design unit 1: rst_delay-logic File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/rst_delay.vhd Line: 42
-    Info (12023): Found entity 1: rst_delay File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/rst_delay.vhd Line: 36
+    Info (12022): Found design unit 1: rst_delay-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/rst_delay.vhd Line: 42
+    Info (12023): Found entity 1: rst_delay File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/rst_delay.vhd Line: 36
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_cntrl.vhd
-    Info (12022): Found design unit 1: i2c_cntrl-logic File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 23
-    Info (12023): Found entity 1: i2c_cntrl File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 6
+    Info (12022): Found design unit 1: i2c_cntrl-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 23
+    Info (12023): Found entity 1: i2c_cntrl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file pll_i2c.v
-    Info (12023): Found entity 1: PLL_I2C File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/PLL_I2C.v Line: 39
+    Info (12023): Found entity 1: PLL_I2C File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/PLL_I2C.v Line: 39
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_wrd_gen.vhd
-    Info (12022): Found design unit 1: i2c_wrd_gen-logic File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_wrd_gen.vhd Line: 16
-    Info (12023): Found entity 1: i2c_wrd_gen File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_wrd_gen.vhd Line: 5
+    Info (12022): Found design unit 1: i2c_wrd_gen-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd Line: 16
+    Info (12023): Found entity 1: i2c_wrd_gen File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pll2.v
-    Info (12023): Found entity 1: PLL2 File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/PLL2.v Line: 39
+    Info (12023): Found entity 1: PLL2 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/PLL2.v Line: 39
 Info (12127): Elaborating entity "TP_FINAL" for the top level hierarchy
+Warning (275083): Bus "D1[9..0]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[9]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[4]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[8]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[7]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[6]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[5]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[3]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[2]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[1]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D1[0]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[9]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[8]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[7]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[6]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[5]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[4]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[3]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[2]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[1]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[0]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D2[9..0]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[9..0]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[9]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[8]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[7]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[6]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[5]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[4]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[3]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[2]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[1]" found using same base name as "D", which might lead to a name conflict.
+Warning (275083): Bus "D3[0]" found using same base name as "D", which might lead to a name conflict.
 Warning (275083): Bus "d_wr2[7..0]" found using same base name as "d_wr", which might lead to a name conflict.
 Warning (275083): Bus "d_wr3[7..0]" found using same base name as "d_wr", which might lead to a name conflict.
 Warning (275080): Converted elements in bus name "d_wr" using legacy naming rules. Make any assignments on the new names, not on the original names.
@@ -455,31 +579,99 @@ Warning (275080): Converted elements in bus name "d_wr2" using legacy naming rul
     Warning (275081): Converted element name(s) from "d_wr2[7..0]" to "d_wr27..0"
 Warning (275080): Converted elements in bus name "d_wr3" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "d_wr3[7..0]" to "d_wr37..0"
+Warning (275080): Converted elements in bus name "D" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "D[9..0]" to "D9..0"
+    Warning (275081): Converted element name(s) from "D[9]" to "D9"
+    Warning (275081): Converted element name(s) from "D[8]" to "D8"
+    Warning (275081): Converted element name(s) from "D[7]" to "D7"
+    Warning (275081): Converted element name(s) from "D[6]" to "D6"
+    Warning (275081): Converted element name(s) from "D[5]" to "D5"
+    Warning (275081): Converted element name(s) from "D[4]" to "D4"
+    Warning (275081): Converted element name(s) from "D[3]" to "D3"
+    Warning (275081): Converted element name(s) from "D[2]" to "D2"
+    Warning (275081): Converted element name(s) from "D[1]" to "D1"
+    Warning (275081): Converted element name(s) from "D[0]" to "D0"
+Warning (275080): Converted elements in bus name "D1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "D1[9..0]" to "D19..0"
+    Warning (275081): Converted element name(s) from "D1[9]" to "D19"
+    Warning (275081): Converted element name(s) from "D1[4]" to "D14"
+    Warning (275081): Converted element name(s) from "D1[8]" to "D18"
+    Warning (275081): Converted element name(s) from "D1[7]" to "D17"
+    Warning (275081): Converted element name(s) from "D1[6]" to "D16"
+    Warning (275081): Converted element name(s) from "D1[5]" to "D15"
+    Warning (275081): Converted element name(s) from "D1[3]" to "D13"
+    Warning (275081): Converted element name(s) from "D1[2]" to "D12"
+    Warning (275081): Converted element name(s) from "D1[1]" to "D11"
+    Warning (275081): Converted element name(s) from "D1[0]" to "D10"
+Warning (275080): Converted elements in bus name "D2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "D2[9]" to "D29"
+    Warning (275081): Converted element name(s) from "D2[8]" to "D28"
+    Warning (275081): Converted element name(s) from "D2[7]" to "D27"
+    Warning (275081): Converted element name(s) from "D2[6]" to "D26"
+    Warning (275081): Converted element name(s) from "D2[5]" to "D25"
+    Warning (275081): Converted element name(s) from "D2[4]" to "D24"
+    Warning (275081): Converted element name(s) from "D2[3]" to "D23"
+    Warning (275081): Converted element name(s) from "D2[2]" to "D22"
+    Warning (275081): Converted element name(s) from "D2[1]" to "D21"
+    Warning (275081): Converted element name(s) from "D2[0]" to "D20"
+    Warning (275081): Converted element name(s) from "D2[9..0]" to "D29..0"
+Warning (275080): Converted elements in bus name "D3" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "D3[9..0]" to "D39..0"
+    Warning (275081): Converted element name(s) from "D3[9]" to "D39"
+    Warning (275081): Converted element name(s) from "D3[8]" to "D38"
+    Warning (275081): Converted element name(s) from "D3[7]" to "D37"
+    Warning (275081): Converted element name(s) from "D3[6]" to "D36"
+    Warning (275081): Converted element name(s) from "D3[5]" to "D35"
+    Warning (275081): Converted element name(s) from "D3[4]" to "D34"
+    Warning (275081): Converted element name(s) from "D3[3]" to "D33"
+    Warning (275081): Converted element name(s) from "D3[2]" to "D32"
+    Warning (275081): Converted element name(s) from "D3[1]" to "D31"
+    Warning (275081): Converted element name(s) from "D3[0]" to "D30"
 Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:inst"
 Info (12128): Elaborating entity "i2c_cntrl" for hierarchy "i2c_cntrl:inst3"
-Warning (10540): VHDL Signal Declaration warning at i2c_cntrl.vhd(25): used explicit default value for signal "adrs" because signal was never assigned a value File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(26): object "d_word2" assigned a value but never read File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 26
-Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(27): object "d_word3" assigned a value but never read File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at i2c_cntrl.vhd(55): signal "reset_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 55
+Warning (10540): VHDL Signal Declaration warning at i2c_cntrl.vhd(25): used explicit default value for signal "adrs" because signal was never assigned a value File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(26): object "d_word2" assigned a value but never read File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 26
+Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(27): object "d_word3" assigned a value but never read File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at i2c_cntrl.vhd(55): signal "reset_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 55
 Info (12128): Elaborating entity "i2c_wrd_gen" for hierarchy "i2c_wrd_gen:inst2"
 Info (12128): Elaborating entity "i2s_transceiver" for hierarchy "i2s_transceiver:inst1"
+Info (12128): Elaborating entity "delay_mod" for hierarchy "delay_mod:inst43"
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "delay_mod:inst4|Delay_reg_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 4096
+        Info (286033): Parameter WIDTH set to 16
+Info (12130): Elaborated megafunction instantiation "delay_mod:inst4|altshift_taps:Delay_reg_rtl_0"
+Info (12133): Instantiated megafunction "delay_mod:inst4|altshift_taps:Delay_reg_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "4096"
+    Info (12134): Parameter "WIDTH" = "16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_cbm.tdf
+    Info (12023): Found entity 1: shift_taps_cbm File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_cbm.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0r81.tdf
+    Info (12023): Found entity 1: altsyncram_0r81 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_0r81.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_lvf.tdf
+    Info (12023): Found entity 1: cntr_lvf File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_lvf.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_9ic.tdf
+    Info (12023): Found entity 1: cmpr_9ic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_9ic.tdf Line: 22
 Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
-    Warning (13051): Converted the fanout from the open-drain buffer "i2c_master:inst|scl" to the node "i2c_master:inst|stretch" into a wire File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2C/i2c_master.vhd Line: 51
-Info (13000): Registers with preset signals will power-up high File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2C/i2c_master.vhd Line: 47
+    Warning (13051): Converted the fanout from the open-drain buffer "i2c_master:inst|scl" to the node "i2c_master:inst|stretch" into a wire File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 51
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 47
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register i2c_cntrl:inst3|i2s_en will power up to High File: D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/i2c_cntrl.vhd Line: 19
+    Critical Warning (18010): Register i2c_cntrl:inst3|i2s_en will power up to High File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 19
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 473 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 516 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 460 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4786 megabytes
-    Info: Processing ended: Wed Jan 20 21:43:17 2021
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (21061): Implemented 487 logic cells
+    Info (21064): Implemented 16 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 5002 megabytes
+    Info: Processing ended: Fri Feb 19 18:18:10 2021
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:00:56
 
 
