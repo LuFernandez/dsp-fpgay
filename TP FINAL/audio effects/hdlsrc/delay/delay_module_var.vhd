@@ -44,7 +44,7 @@ ENTITY delay_module IS
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
         In1                               :   IN    std_logic_vector(15 DOWNTO 0);  -- int16
-		  delay_sel                         :   IN    unsigned(9 DOWNTO 0);  -- int10
+		  delay_sel                         :   IN    unsigned(15 DOWNTO 0);  -- int16
         ce_out                            :   OUT   std_logic;
         Out1                              :   OUT   std_logic_vector(15 DOWNTO 0)  -- int16
         );
@@ -56,7 +56,7 @@ ARCHITECTURE rtl OF delay_module IS
   -- Signals
   SIGNAL enb                              : std_logic;
   SIGNAL In1_signed                       : signed(15 DOWNTO 0);  -- int16
-  SIGNAL Delay_reg                        : vector_of_signed16(0 TO 1023);  -- sfix16 [1024]
+  SIGNAL Delay_reg                        : vector_of_signed16(0 TO 65535);  -- sfix16 [65536]
   SIGNAL Delay_out1                       : signed(15 DOWNTO 0);  -- int16
   SIGNAL attenuation_mul_temp             : signed(31 DOWNTO 0);  -- sfix32_En16
   SIGNAL attenuation_out1                 : signed(15 DOWNTO 0);  -- int16
@@ -74,7 +74,7 @@ BEGIN
     ELSIF clk'EVENT AND clk = '1' THEN
       IF enb = '1' THEN
         Delay_reg(0) <= In1_signed;
-        Delay_reg(1 TO 1023) <= Delay_reg(0 TO 1022); -- delay de 100ms (100(ms)*44.1(kHz)=4410 muestras de delay)
+        Delay_reg(1 TO 65535) <= Delay_reg(0 TO 65534); -- delay de 100ms (100(ms)*44.1(kHz)=4410 muestras de delay)
       END IF;
     END IF;
   END PROCESS Delay_process;
