@@ -65,6 +65,8 @@ set_location_assignment PIN_R11 -to I2S_TX_DATA
 set_location_assignment PIN_R10 -to I2S_RX_DATA
 set_location_assignment PIN_R13 -to GENERAL_CLOCK
 set_location_assignment PIN_J14 -to i2s_en
+set_global_assignment -name VHDL_FILE "../audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms_pkg.vhd"
+set_global_assignment -name VHDL_FILE "../audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd"
 set_global_assignment -name VHDL_FILE "../audio effects/hdlsrc/delay/delay_module_var.vhd"
 set_global_assignment -name VHDL_FILE "../audio effects/hdlsrc/delay/delay_module_pkg.vhd"
 set_global_assignment -name VHDL_FILE "../audio effects/hdlsrc/delay/delay_module.vhd"
