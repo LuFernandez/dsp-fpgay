@@ -3,132 +3,132 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CK_50M'
-Slack : -6.362
-TNS   : -944.669
+Slack : -5.902
+TNS   : -694.703
 
 Type  : Slow 1200mV 85C Model Setup 'i2s_transceiver:inst1|ws_int'
-Slack : -1.818
-TNS   : -64.175
+Slack : -2.012
+TNS   : -161.069
 
 Type  : Slow 1200mV 85C Model Setup 'i2c_cntrl:inst3|pack_end'
-Slack : -0.057
-TNS   : -0.114
+Slack : -0.204
+TNS   : -0.300
 
 Type  : Slow 1200mV 85C Model Hold 'CK_50M'
-Slack : -0.055
-TNS   : -0.055
+Slack : -0.806
+TNS   : -0.806
 
 Type  : Slow 1200mV 85C Model Hold 'i2s_transceiver:inst1|ws_int'
-Slack : -0.048
-TNS   : -0.048
+Slack : 0.335
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'i2c_cntrl:inst3|pack_end'
-Slack : 0.358
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'CK_50M'
-Slack : -1.625
-TNS   : -258.531
+Slack : -1.251
+TNS   : -91.898
 
 Type  : Slow 1200mV 85C Model Removal 'CK_50M'
-Slack : 0.938
+Slack : 0.668
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CK_50M'
 Slack : -3.000
-TNS   : -256.000
+TNS   : -208.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i2s_transceiver:inst1|ws_int'
 Slack : -2.174
-TNS   : -98.960
+TNS   : -258.096
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'i2c_cntrl:inst3|pack_end'
 Slack : -1.000
 TNS   : -4.000
 
 Type  : Slow 1200mV 0C Model Setup 'CK_50M'
-Slack : -5.636
-TNS   : -827.031
+Slack : -5.200
+TNS   : -606.279
 
 Type  : Slow 1200mV 0C Model Setup 'i2s_transceiver:inst1|ws_int'
-Slack : -1.511
-TNS   : -53.311
+Slack : -1.656
+TNS   : -132.469
 
 Type  : Slow 1200mV 0C Model Setup 'i2c_cntrl:inst3|pack_end'
-Slack : 0.057
-TNS   : 0.000
+Slack : -0.073
+TNS   : -0.073
 
 Type  : Slow 1200mV 0C Model Hold 'CK_50M'
-Slack : -0.044
-TNS   : -0.044
-
-Type  : Slow 1200mV 0C Model Hold 'i2s_transceiver:inst1|ws_int'
-Slack : -0.009
-TNS   : -0.009
+Slack : -0.706
+TNS   : -0.706
 
 Type  : Slow 1200mV 0C Model Hold 'i2c_cntrl:inst3|pack_end'
 Slack : 0.312
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'i2s_transceiver:inst1|ws_int'
+Slack : 0.331
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Recovery 'CK_50M'
-Slack : -1.335
-TNS   : -208.881
+Slack : -1.017
+TNS   : -68.114
 
 Type  : Slow 1200mV 0C Model Removal 'CK_50M'
-Slack : 0.845
+Slack : 0.609
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CK_50M'
 Slack : -3.000
-TNS   : -256.000
+TNS   : -208.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i2s_transceiver:inst1|ws_int'
 Slack : -2.174
-TNS   : -98.960
+TNS   : -258.096
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'i2c_cntrl:inst3|pack_end'
 Slack : -1.000
 TNS   : -4.000
 
 Type  : Fast 1200mV 0C Model Setup 'CK_50M'
-Slack : -3.165
-TNS   : -420.689
+Slack : -2.953
+TNS   : -302.533
 
 Type  : Fast 1200mV 0C Model Setup 'i2s_transceiver:inst1|ws_int'
-Slack : -0.607
-TNS   : -14.997
+Slack : -0.712
+TNS   : -39.006
 
 Type  : Fast 1200mV 0C Model Setup 'i2c_cntrl:inst3|pack_end'
-Slack : 0.402
+Slack : 0.311
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'i2s_transceiver:inst1|ws_int'
-Slack : -0.094
-TNS   : -0.233
-
 Type  : Fast 1200mV 0C Model Hold 'CK_50M'
-Slack : -0.007
-TNS   : -0.007
+Slack : -0.485
+TNS   : -0.485
+
+Type  : Fast 1200mV 0C Model Hold 'i2s_transceiver:inst1|ws_int'
+Slack : 0.123
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'i2c_cntrl:inst3|pack_end'
 Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'CK_50M'
-Slack : -0.544
-TNS   : -77.224
+Slack : -0.338
+TNS   : -10.127
 
 Type  : Fast 1200mV 0C Model Removal 'CK_50M'
-Slack : 0.513
+Slack : 0.366
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CK_50M'
 Slack : -3.000
-TNS   : -271.335
+TNS   : -220.704
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i2s_transceiver:inst1|ws_int'
 Slack : -1.000
-TNS   : -52.000
+TNS   : -136.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'i2c_cntrl:inst3|pack_end'
 Slack : -1.000

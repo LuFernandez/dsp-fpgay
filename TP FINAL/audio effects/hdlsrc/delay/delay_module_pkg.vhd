@@ -14,5 +14,6 @@ USE IEEE.numeric_std.ALL;
 
 PACKAGE delay_module_pkg IS
   TYPE vector_of_signed16 IS ARRAY (NATURAL RANGE <>) OF signed(15 DOWNTO 0);
+  TYPE vector_of_signed8 IS ARRAY (NATURAL RANGE <>) OF signed(7 DOWNTO 0);
 END delay_module_pkg;
 
