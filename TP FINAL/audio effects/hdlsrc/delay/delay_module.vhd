@@ -55,7 +55,7 @@ ARCHITECTURE rtl OF delay_module IS
   -- Signals
   SIGNAL enb                              : std_logic;
   SIGNAL In1_signed                       : signed(7 DOWNTO 0);  -- int16
-  SIGNAL Delay_reg                        : vector_of_signed16(0 TO 4409);  -- sfix16 [4410]
+  SIGNAL Delay_reg                        : vector_of_signed8(0 TO 4409);  -- sfix16 [4410]
   SIGNAL Delay_out1                       : signed(7 DOWNTO 0);  -- int16
   SIGNAL attenuation_mul_temp             : signed(31 DOWNTO 0);  -- sfix32_En16
   SIGNAL attenuation_out1                 : signed(7 DOWNTO 0);  -- int16
@@ -69,7 +69,7 @@ BEGIN
   Delay_process : PROCESS (clk, reset)
   BEGIN
     IF reset = '1' THEN
-      Delay_reg <= (OTHERS => to_signed(16#0000#, 16));
+      Delay_reg <= (OTHERS => to_signed(8#0000#, 8));
     ELSIF clk'EVENT AND clk = '1' THEN
       IF enb = '1' THEN
         Delay_reg(0) <= In1_signed;

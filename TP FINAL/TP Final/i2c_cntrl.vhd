@@ -51,7 +51,7 @@ BEGIN
   VARIABLE count  :  INTEGER RANGE 0 TO 10000 := 0;  --timing for clock generation
   VARIABLE pack_count :	INTEGER RANGE 0 TO 15  := 0;
   BEGIN
-	 IF(pack_count < 6) THEN
+	 IF(pack_count < 8) THEN
 		 IF (clk'EVENT AND clk = '1' and reset_tmp = '1') THEN
 			IF (count = 0) THEN
 				i2s_en <= '0';
@@ -93,7 +93,7 @@ BEGIN
 			en <= enable;
 		 END IF;
 	 END IF;
-	 IF (pack_count = 6) THEN
+	 IF (pack_count = 8) THEN
 		 i2s_en <= '1';	 
 	 END IF;
   END PROCESS;

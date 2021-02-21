@@ -95,17 +95,17 @@ refer to the applicable agreement for further details.
 	)
 	(parameter
 		"mclk_sclk_ratio"
-		"4"
+		"71"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"sclk_ws_ratio"
-		"64"
+		"16"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"d_width"
-		"24"
+		"8"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
