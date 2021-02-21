@@ -1,0 +1,2 @@
+ --> reverberador_completo_8b_pkg
+rev_completo_8bits/reverberador_completo_8b  --> reverberador_completo_8b
