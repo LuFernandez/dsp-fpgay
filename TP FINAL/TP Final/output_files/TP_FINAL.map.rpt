@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP_FINAL
-Fri Feb 19 23:44:33 2021
+Sun Feb 21 00:34:26 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -21,17 +21,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  13. Inverted Register Statistics
  14. Registers Packed Into Inferred Megafunctions
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|altsyncram_ir81:altsyncram2
+ 16. Source assignments for delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2
  17. Parameter Settings for User Entity Instance: i2c_master:inst
  18. Parameter Settings for User Entity Instance: i2s_transceiver:inst1
- 19. Parameter Settings for Inferred Entity Instance: delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0
- 20. Parameter Settings for Inferred Entity Instance: delay_effect_200ms:inst8|lpm_mult:Mult0
- 21. Parameter Settings for Inferred Entity Instance: delay_effect_200ms:inst5|lpm_mult:Mult0
- 22. altshift_taps Parameter Settings by Entity Instance
- 23. lpm_mult Parameter Settings by Entity Instance
- 24. Post-Synthesis Netlist Statistics for Top Partition
- 25. Elapsed Time Per Partition
- 26. Analysis & Synthesis Messages
+ 19. Parameter Settings for Inferred Entity Instance: delay_mod:inst42|altshift_taps:Delay_reg_rtl_0
+ 20. altshift_taps Parameter Settings by Entity Instance
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -57,18 +54,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 19 23:44:33 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 21 00:34:25 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TP_FINAL                                    ;
 ; Top-level Entity Name              ; TP_FINAL                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 540                                         ;
-;     Total combinational functions  ; 495                                         ;
-;     Dedicated logic registers      ; 241                                         ;
-; Total registers                    ; 241                                         ;
+; Total logic elements               ; 438                                         ;
+;     Total combinational functions  ; 395                                         ;
+;     Dedicated logic registers      ; 229                                         ;
+; Total registers                    ; 229                                         ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 141,072                                     ;
+; Total memory bits                  ; 32,752                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -178,52 +175,28 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                          ;
-+-----------------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                      ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                           ; Library ;
-+-----------------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
-; ../audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms_pkg.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms_pkg.vhd ;         ;
-; ../audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd     ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd     ;         ;
-; i2s_transceiver.vhd                                                   ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd                                       ;         ;
-; i2C/i2c_master.vhd                                                    ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd                                        ;         ;
-; TP_FINAL.bdf                                                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/TP_FINAL.bdf                                              ;         ;
-; i2c_cntrl.vhd                                                         ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd                                             ;         ;
-; i2c_wrd_gen.vhd                                                       ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd                                           ;         ;
-; altshift_taps.tdf                                                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift_taps.tdf                                               ;         ;
-; altdpram.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                    ;         ;
-; lpm_counter.inc                                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc                                                 ;         ;
-; lpm_compare.inc                                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc                                                 ;         ;
-; lpm_constant.inc                                                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc                                                ;         ;
-; db/shift_taps_jbm.tdf                                                 ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_jbm.tdf                                     ;         ;
-; db/altsyncram_ir81.tdf                                                ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_ir81.tdf                                    ;         ;
-; db/decode_jsa.tdf                                                     ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/decode_jsa.tdf                                         ;         ;
-; db/mux_iob.tdf                                                        ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/mux_iob.tdf                                            ;         ;
-; db/cntr_uvf.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_uvf.tdf                                           ;         ;
-; db/cmpr_bic.tdf                                                       ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_bic.tdf                                           ;         ;
-; lpm_mult.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                    ;         ;
-; aglobal181.inc                                                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                  ;         ;
-; lpm_add_sub.inc                                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                 ;         ;
-; multcore.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                                                    ;         ;
-; bypassff.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                                                    ;         ;
-; altshift.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                                                    ;         ;
-; multcore.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf                                                    ;         ;
-; csa_add.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/csa_add.inc                                                     ;         ;
-; mpar_add.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.inc                                                    ;         ;
-; muleabz.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/muleabz.inc                                                     ;         ;
-; mul_lfrg.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_lfrg.inc                                                    ;         ;
-; mul_boothc.inc                                                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mul_boothc.inc                                                  ;         ;
-; alt_ded_mult.inc                                                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                ;         ;
-; alt_ded_mult_y.inc                                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                              ;         ;
-; dffpipe.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/dffpipe.inc                                                     ;         ;
-; mpar_add.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf                                                    ;         ;
-; lpm_add_sub.tdf                                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                 ;         ;
-; addcore.inc                                                           ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/addcore.inc                                                     ;         ;
-; look_add.inc                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/look_add.inc                                                    ;         ;
-; alt_stratix_add_sub.inc                                               ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                         ;         ;
-; db/add_sub_lgh.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/add_sub_lgh.tdf                                        ;         ;
-; altshift.tdf                                                          ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.tdf                                                    ;         ;
-+-----------------------------------------------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; ../audio effects/hdlsrc/delay/delay_module_var.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_var.vhd ;         ;
+; ../audio effects/hdlsrc/delay/delay_module_pkg.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_pkg.vhd ;         ;
+; i2s_transceiver.vhd                                ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd                    ;         ;
+; i2C/i2c_master.vhd                                 ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd                     ;         ;
+; TP_FINAL.bdf                                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/TP_FINAL.bdf                           ;         ;
+; i2c_cntrl.vhd                                      ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd                          ;         ;
+; i2c_wrd_gen.vhd                                    ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd                        ;         ;
+; altshift_taps.tdf                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift_taps.tdf                            ;         ;
+; altdpram.inc                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
+; lpm_counter.inc                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc                              ;         ;
+; lpm_compare.inc                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc                              ;         ;
+; lpm_constant.inc                                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc                             ;         ;
+; db/shift_taps_t9m.tdf                              ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_t9m.tdf                  ;         ;
+; db/altsyncram_2o81.tdf                             ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_2o81.tdf                 ;         ;
+; db/cntr_lvf.tdf                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_lvf.tdf                        ;         ;
+; db/cmpr_9ic.tdf                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_9ic.tdf                        ;         ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -231,73 +204,61 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 540          ;
+; Estimated Total logic elements              ; 438          ;
 ;                                             ;              ;
-; Total combinational functions               ; 495          ;
+; Total combinational functions               ; 395          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 211          ;
-;     -- 3 input functions                    ; 120          ;
-;     -- <=2 input functions                  ; 164          ;
+;     -- 4 input functions                    ; 160          ;
+;     -- 3 input functions                    ; 64           ;
+;     -- <=2 input functions                  ; 171          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 337          ;
-;     -- arithmetic mode                      ; 158          ;
+;     -- normal mode                          ; 287          ;
+;     -- arithmetic mode                      ; 108          ;
 ;                                             ;              ;
-; Total registers                             ; 241          ;
-;     -- Dedicated logic registers            ; 241          ;
+; Total registers                             ; 229          ;
+;     -- Dedicated logic registers            ; 229          ;
 ;     -- I/O registers                        ; 0            ;
 ;                                             ;              ;
 ; I/O pins                                    ; 13           ;
-; Total memory bits                           ; 141072       ;
+; Total memory bits                           ; 32752        ;
 ;                                             ;              ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; CK_50M~input ;
-; Maximum fan-out                             ; 206          ;
-; Total fan-out                               ; 2829         ;
-; Average fan-out                             ; 3.56         ;
+; Maximum fan-out                             ; 214          ;
+; Total fan-out                               ; 2101         ;
+; Average fan-out                             ; 3.19         ;
 +---------------------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                     ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name        ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |TP_FINAL                                      ; 495 (0)             ; 241 (0)                   ; 141072      ; 0            ; 0       ; 0         ; 13   ; 0            ; |TP_FINAL                                                                                                                               ; TP_FINAL           ; work         ;
-;    |delay_effect_200ms:inst5|                  ; 53 (25)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst5                                                                                                      ; delay_effect_200ms ; work         ;
-;       |lpm_mult:Mult0|                         ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst5|lpm_mult:Mult0                                                                                       ; lpm_mult           ; work         ;
-;          |multcore:mult_core|                  ; 28 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst5|lpm_mult:Mult0|multcore:mult_core                                                                    ; multcore           ; work         ;
-;             |mpar_add:padder|                  ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                    ; mpar_add           ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                               ; lpm_add_sub        ; work         ;
-;                   |add_sub_lgh:auto_generated| ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst5|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_lgh:auto_generated    ; add_sub_lgh        ; work         ;
-;    |delay_effect_200ms:inst8|                  ; 103 (25)            ; 24 (8)                    ; 141072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8                                                                                                      ; delay_effect_200ms ; work         ;
-;       |altshift_taps:Delay_reg_rtl_0|          ; 50 (0)              ; 16 (0)                    ; 141072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0                                                                        ; altshift_taps      ; work         ;
-;          |shift_taps_jbm:auto_generated|       ; 50 (0)              ; 16 (0)                    ; 141072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated                                          ; shift_taps_jbm     ; work         ;
-;             |altsyncram_ir81:altsyncram2|      ; 16 (0)              ; 2 (2)                     ; 141072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|altsyncram_ir81:altsyncram2              ; altsyncram_ir81    ; work         ;
-;                |mux_iob:mux5|                  ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|altsyncram_ir81:altsyncram2|mux_iob:mux5 ; mux_iob            ; work         ;
-;             |cntr_uvf:cntr1|                   ; 34 (29)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|cntr_uvf:cntr1                           ; cntr_uvf           ; work         ;
-;                |cmpr_bic:cmpr6|                ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|cntr_uvf:cntr1|cmpr_bic:cmpr6            ; cmpr_bic           ; work         ;
-;       |lpm_mult:Mult0|                         ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|lpm_mult:Mult0                                                                                       ; lpm_mult           ; work         ;
-;          |multcore:mult_core|                  ; 28 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core                                                                    ; multcore           ; work         ;
-;             |mpar_add:padder|                  ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                    ; mpar_add           ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                               ; lpm_add_sub        ; work         ;
-;                   |add_sub_lgh:auto_generated| ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_lgh:auto_generated    ; add_sub_lgh        ; work         ;
-;    |i2c_cntrl:inst3|                           ; 106 (106)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_cntrl:inst3                                                                                                               ; i2c_cntrl          ; work         ;
-;    |i2c_master:inst|                           ; 80 (80)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_master:inst                                                                                                               ; i2c_master         ; work         ;
-;    |i2c_wrd_gen:inst2|                         ; 11 (11)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_wrd_gen:inst2                                                                                                             ; i2c_wrd_gen        ; work         ;
-;    |i2s_transceiver:inst1|                     ; 142 (142)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2s_transceiver:inst1                                                                                                         ; i2s_transceiver    ; work         ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |TP_FINAL                                 ; 395 (0)             ; 229 (0)                   ; 32752       ; 0            ; 0       ; 0         ; 13   ; 0            ; |TP_FINAL                                                                                                            ; TP_FINAL        ; work         ;
+;    |delay_mod:inst42|                     ; 29 (0)              ; 12 (0)                    ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42                                                                                           ; delay_mod       ; work         ;
+;       |altshift_taps:Delay_reg_rtl_0|     ; 29 (0)              ; 12 (0)                    ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0                                                             ; altshift_taps   ; work         ;
+;          |shift_taps_t9m:auto_generated|  ; 29 (0)              ; 12 (0)                    ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated                               ; shift_taps_t9m  ; work         ;
+;             |altsyncram_2o81:altsyncram2| ; 0 (0)               ; 0 (0)                     ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2   ; altsyncram_2o81 ; work         ;
+;             |cntr_lvf:cntr1|              ; 29 (25)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|cntr_lvf:cntr1                ; cntr_lvf        ; work         ;
+;                |cmpr_9ic:cmpr4|           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|cntr_lvf:cntr1|cmpr_9ic:cmpr4 ; cmpr_9ic        ; work         ;
+;    |i2c_cntrl:inst3|                      ; 107 (107)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_cntrl:inst3                                                                                            ; i2c_cntrl       ; work         ;
+;    |i2c_master:inst|                      ; 81 (81)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_master:inst                                                                                            ; i2c_master      ; work         ;
+;    |i2c_wrd_gen:inst39|                   ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_wrd_gen:inst39                                                                                         ; i2c_wrd_gen     ; work         ;
+;    |i2s_transceiver:inst1|                ; 159 (159)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2s_transceiver:inst1                                                                                      ; i2s_transceiver ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                  ;
-+-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; Name                                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
-+-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|altsyncram_ir81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8817         ; 16           ; 8817         ; 16           ; 141072 ; None ;
-+-----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                         ;
++---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4094         ; 8            ; 4094         ; 8            ; 32752 ; None ;
++---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
 Encoding Type:  One-Hot
@@ -318,45 +279,44 @@ Encoding Type:  One-Hot
 +----------------+------------+----------------+----------------+----------+----------+----------------+---------------+-------------+-------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; i2c_wrd_gen:inst2|rw                   ; Stuck at GND due to stuck port data_in ;
-; i2c_wrd_gen:inst2|d_wr2[6]             ; Stuck at GND due to stuck port data_in ;
-; i2c_wrd_gen:inst2|d_wr[7]              ; Stuck at GND due to stuck port data_in ;
-; i2c_cntrl:inst3|rw_temp                ; Stuck at GND due to stuck port data_in ;
-; i2c_cntrl:inst3|address[0..2]          ; Stuck at GND due to stuck port data_in ;
-; i2c_cntrl:inst3|address[3,4]           ; Stuck at VCC due to stuck port data_in ;
-; i2c_cntrl:inst3|address[5,6]           ; Stuck at GND due to stuck port data_in ;
-; i2c_master:inst|addr_rw[2,3,6,7]       ; Merged with i2c_master:inst|addr_rw[1] ;
-; i2c_master:inst|addr_rw[5]             ; Merged with i2c_master:inst|addr_rw[4] ;
-; i2c_wrd_gen:inst2|d_wr3[0,2,3,6,7]     ; Merged with i2c_wrd_gen:inst2|d_wr2[7] ;
-; i2c_wrd_gen:inst2|d_wr2[5]             ; Merged with i2c_wrd_gen:inst2|d_wr2[2] ;
-; i2c_wrd_gen:inst2|d_wr3[1,4]           ; Merged with i2c_wrd_gen:inst2|d_wr2[2] ;
-; i2c_wrd_gen:inst2|d_wr2[1,3,4]         ; Merged with i2c_wrd_gen:inst2|d_wr2[0] ;
-; i2c_wrd_gen:inst2|d_wr3[5]             ; Merged with i2c_wrd_gen:inst2|d_wr2[0] ;
-; i2c_wrd_gen:inst2|d_wr[3,5,6]          ; Merged with i2c_wrd_gen:inst2|d_wr[2]  ;
-; i2c_cntrl:inst3|rw_out                 ; Stuck at GND due to stuck port data_in ;
-; i2c_master:inst|addr_rw[0,1]           ; Stuck at GND due to stuck port data_in ;
-; i2c_master:inst|addr_rw[4]             ; Stuck at VCC due to stuck port data_in ;
-; Total Number of Removed Registers = 35 ;                                        ;
-+----------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++----------------------------------------+-----------------------------------------+
+; Register name                          ; Reason for Removal                      ;
++----------------------------------------+-----------------------------------------+
+; i2c_wrd_gen:inst39|rw                  ; Stuck at GND due to stuck port data_in  ;
+; i2c_wrd_gen:inst39|d_wr3[6,7]          ; Stuck at GND due to stuck port data_in  ;
+; i2c_wrd_gen:inst39|d_wr[7]             ; Stuck at GND due to stuck port data_in  ;
+; i2c_cntrl:inst3|rw_temp                ; Stuck at GND due to stuck port data_in  ;
+; i2c_cntrl:inst3|address[0..2]          ; Stuck at GND due to stuck port data_in  ;
+; i2c_cntrl:inst3|address[3,4]           ; Stuck at VCC due to stuck port data_in  ;
+; i2c_cntrl:inst3|address[5,6]           ; Stuck at GND due to stuck port data_in  ;
+; i2c_master:inst|addr_rw[2,3,6,7]       ; Merged with i2c_master:inst|addr_rw[1]  ;
+; i2c_master:inst|addr_rw[5]             ; Merged with i2c_master:inst|addr_rw[4]  ;
+; i2c_wrd_gen:inst39|d_wr[3,6]           ; Merged with i2c_wrd_gen:inst39|d_wr[2]  ;
+; i2c_wrd_gen:inst39|d_wr3[5]            ; Merged with i2c_wrd_gen:inst39|d_wr3[4] ;
+; i2c_wrd_gen:inst39|d_wr3[2,3]          ; Merged with i2c_wrd_gen:inst39|d_wr3[0] ;
+; i2c_wrd_gen:inst39|d_wr2[2]            ; Merged with i2c_wrd_gen:inst39|d_wr2[0] ;
+; i2c_cntrl:inst3|rw_out                 ; Stuck at GND due to stuck port data_in  ;
+; i2c_master:inst|addr_rw[0]             ; Merged with i2c_master:inst|addr_rw[1]  ;
+; i2c_master:inst|addr_rw[1]             ; Stuck at GND due to stuck port data_in  ;
+; i2c_master:inst|addr_rw[4]             ; Stuck at VCC due to stuck port data_in  ;
+; Total Number of Removed Registers = 27 ;                                         ;
++----------------------------------------+-----------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                          ;
-+----------------------------+---------------------------+-----------------------------------------------------------------------------+
-; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                      ;
-+----------------------------+---------------------------+-----------------------------------------------------------------------------+
-; i2c_wrd_gen:inst2|rw       ; Stuck at GND              ; i2c_cntrl:inst3|rw_temp, i2c_cntrl:inst3|rw_out, i2c_master:inst|addr_rw[0] ;
-;                            ; due to stuck port data_in ;                                                                             ;
-; i2c_cntrl:inst3|address[0] ; Stuck at GND              ; i2c_master:inst|addr_rw[1]                                                  ;
-;                            ; due to stuck port data_in ;                                                                             ;
-; i2c_cntrl:inst3|address[3] ; Stuck at VCC              ; i2c_master:inst|addr_rw[4]                                                  ;
-;                            ; due to stuck port data_in ;                                                                             ;
-+----------------------------+---------------------------+-----------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                              ;
++----------------------------+---------------------------+-------------------------------------------------+
+; Register name              ; Reason for Removal        ; Registers Removed due to This Register          ;
++----------------------------+---------------------------+-------------------------------------------------+
+; i2c_wrd_gen:inst39|rw      ; Stuck at GND              ; i2c_cntrl:inst3|rw_temp, i2c_cntrl:inst3|rw_out ;
+;                            ; due to stuck port data_in ;                                                 ;
+; i2c_cntrl:inst3|address[0] ; Stuck at GND              ; i2c_master:inst|addr_rw[1]                      ;
+;                            ; due to stuck port data_in ;                                                 ;
+; i2c_cntrl:inst3|address[3] ; Stuck at VCC              ; i2c_master:inst|addr_rw[4]                      ;
+;                            ; due to stuck port data_in ;                                                 ;
++----------------------------+---------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -364,9 +324,9 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 241   ;
+; Total registers                              ; 229   ;
 ; Number of registers using Synchronous Clear  ; 46    ;
-; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 140   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 147   ;
@@ -389,14 +349,13 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                                              ;
-+---------------------------------------------------+------------------------------------------+------------+
-; Register Name                                     ; Megafunction                             ; Type       ;
-+---------------------------------------------------+------------------------------------------+------------+
-; delay_effect_200ms:inst8|Delay_reg[0..8818][0..7] ; delay_effect_200ms:inst8|Delay_reg_rtl_0 ; SHIFT_TAPS ;
-; delay_effect_200ms:inst5|Delay_reg[0..8818][0..7] ; delay_effect_200ms:inst8|Delay_reg_rtl_0 ; SHIFT_TAPS ;
-+---------------------------------------------------+------------------------------------------+------------+
++-------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                              ;
++-------------------------------------------+----------------------------------+------------+
+; Register Name                             ; Megafunction                     ; Type       ;
++-------------------------------------------+----------------------------------+------------+
+; delay_mod:inst42|Delay_reg[0..4095][0..7] ; delay_mod:inst42|Delay_reg_rtl_0 ; SHIFT_TAPS ;
++-------------------------------------------+----------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -406,19 +365,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TP_FINAL|i2c_master:inst|data_tx[7]             ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TP_FINAL|i2s_transceiver:inst1|l_data_tx_int[7] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TP_FINAL|i2s_transceiver:inst1|r_data_tx_int[7] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TP_FINAL|i2c_cntrl:inst3|data_wr[4]             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TP_FINAL|i2s_transceiver:inst1|r_data_tx_int[3] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TP_FINAL|i2c_cntrl:inst3|data_wr[5]             ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TP_FINAL|i2c_master:inst|bit_cnt[2]             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0|shift_taps_jbm:auto_generated|altsyncram_ir81:altsyncram2 ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                        ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                         ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -438,139 +397,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name  ; Value ; Type                                     ;
 +-----------------+-------+------------------------------------------+
 ; mclk_sclk_ratio ; 50    ; Signed Integer                           ;
-; sclk_ws_ratio   ; 31    ; Signed Integer                           ;
+; sclk_ws_ratio   ; 32    ; Signed Integer                           ;
 ; d_width         ; 8     ; Signed Integer                           ;
 +-----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0 ;
-+----------------+----------------+-----------------------------------------------------------------------+
-; Parameter Name ; Value          ; Type                                                                  ;
-+----------------+----------------+-----------------------------------------------------------------------+
-; WIDTH_BYTEENA  ; 1              ; Untyped                                                               ;
-; NUMBER_OF_TAPS ; 1              ; Untyped                                                               ;
-; TAP_DISTANCE   ; 8819           ; Untyped                                                               ;
-; WIDTH          ; 16             ; Untyped                                                               ;
-; POWER_UP_STATE ; CLEARED        ; Untyped                                                               ;
-; CBXI_PARAMETER ; shift_taps_jbm ; Untyped                                                               ;
-+----------------+----------------+-----------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: delay_mod:inst42|altshift_taps:Delay_reg_rtl_0 ;
++----------------+----------------+---------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                          ;
++----------------+----------------+---------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                       ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                       ;
+; TAP_DISTANCE   ; 4096           ; Untyped                                                       ;
+; WIDTH          ; 8              ; Untyped                                                       ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                       ;
+; CBXI_PARAMETER ; shift_taps_t9m ; Untyped                                                       ;
++----------------+----------------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: delay_effect_200ms:inst8|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+--------------------------+
-; Parameter Name                                 ; Value        ; Type                     ;
-+------------------------------------------------+--------------+--------------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY               ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY             ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE             ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE           ;
-; LPM_WIDTHA                                     ; 8            ; Untyped                  ;
-; LPM_WIDTHB                                     ; 8            ; Untyped                  ;
-; LPM_WIDTHP                                     ; 16           ; Untyped                  ;
-; LPM_WIDTHR                                     ; 16           ; Untyped                  ;
-; LPM_WIDTHS                                     ; 1            ; Untyped                  ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                  ;
-; LPM_PIPELINE                                   ; 0            ; Untyped                  ;
-; LATENCY                                        ; 0            ; Untyped                  ;
-; INPUT_A_IS_CONSTANT                            ; YES          ; Untyped                  ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                  ;
-; USE_EAB                                        ; OFF          ; Untyped                  ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped                  ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                  ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped                  ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K      ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                  ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                  ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                  ;
-; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                  ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                  ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                  ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                  ;
-+------------------------------------------------+--------------+--------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: delay_effect_200ms:inst5|lpm_mult:Mult0 ;
-+------------------------------------------------+--------------+--------------------------+
-; Parameter Name                                 ; Value        ; Type                     ;
-+------------------------------------------------+--------------+--------------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY               ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY             ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE             ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE           ;
-; LPM_WIDTHA                                     ; 8            ; Untyped                  ;
-; LPM_WIDTHB                                     ; 8            ; Untyped                  ;
-; LPM_WIDTHP                                     ; 16           ; Untyped                  ;
-; LPM_WIDTHR                                     ; 16           ; Untyped                  ;
-; LPM_WIDTHS                                     ; 1            ; Untyped                  ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                  ;
-; LPM_PIPELINE                                   ; 0            ; Untyped                  ;
-; LATENCY                                        ; 0            ; Untyped                  ;
-; INPUT_A_IS_CONSTANT                            ; YES          ; Untyped                  ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                  ;
-; USE_EAB                                        ; OFF          ; Untyped                  ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped                  ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                  ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped                  ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K      ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                  ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                  ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                  ;
-; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                  ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                  ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                  ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                  ;
-+------------------------------------------------+--------------+--------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; altshift_taps Parameter Settings by Entity Instance                                 ;
-+----------------------------+--------------------------------------------------------+
-; Name                       ; Value                                                  ;
-+----------------------------+--------------------------------------------------------+
-; Number of entity instances ; 1                                                      ;
-; Entity Instance            ; delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0 ;
-;     -- NUMBER_OF_TAPS      ; 1                                                      ;
-;     -- TAP_DISTANCE        ; 8819                                                   ;
-;     -- WIDTH               ; 16                                                     ;
-+----------------------------+--------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                  ;
-+---------------------------------------+-----------------------------------------+
-; Name                                  ; Value                                   ;
-+---------------------------------------+-----------------------------------------+
-; Number of entity instances            ; 2                                       ;
-; Entity Instance                       ; delay_effect_200ms:inst8|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8                                       ;
-;     -- LPM_WIDTHB                     ; 8                                       ;
-;     -- LPM_WIDTHP                     ; 16                                      ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                ;
-;     -- INPUT_A_IS_CONSTANT            ; YES                                     ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                      ;
-;     -- USE_EAB                        ; OFF                                     ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                    ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                      ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                      ;
-; Entity Instance                       ; delay_effect_200ms:inst5|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 8                                       ;
-;     -- LPM_WIDTHB                     ; 8                                       ;
-;     -- LPM_WIDTHP                     ; 16                                      ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                ;
-;     -- INPUT_A_IS_CONSTANT            ; YES                                     ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                      ;
-;     -- USE_EAB                        ; OFF                                     ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                    ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                      ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                      ;
-+---------------------------------------+-----------------------------------------+
++-----------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                         ;
++----------------------------+------------------------------------------------+
+; Name                       ; Value                                          ;
++----------------------------+------------------------------------------------+
+; Number of entity instances ; 1                                              ;
+; Entity Instance            ; delay_mod:inst42|altshift_taps:Delay_reg_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                              ;
+;     -- TAP_DISTANCE        ; 4096                                           ;
+;     -- WIDTH               ; 8                                              ;
++----------------------------+------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -579,29 +437,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 241                         ;
+; cycloneiii_ff         ; 229                         ;
 ;     CLR               ; 12                          ;
 ;     CLR SCLR          ; 32                          ;
-;     ENA               ; 32                          ;
+;     ENA               ; 31                          ;
 ;     ENA CLR           ; 96                          ;
 ;     ENA SCLR          ; 14                          ;
-;     ENA SLD           ; 5                           ;
-;     plain             ; 50                          ;
+;     ENA SLD           ; 6                           ;
+;     plain             ; 38                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 497                         ;
-;     arith             ; 158                         ;
-;         2 data inputs ; 125                         ;
-;         3 data inputs ; 33                          ;
-;     normal            ; 339                         ;
-;         0 data inputs ; 3                           ;
+; cycloneiii_lcell_comb ; 397                         ;
+;     arith             ; 108                         ;
+;         2 data inputs ; 105                         ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 289                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 87                          ;
-;         4 data inputs ; 211                         ;
-; cycloneiii_ram_block  ; 32                          ;
+;         2 data inputs ; 55                          ;
+;         3 data inputs ; 61                          ;
+;         4 data inputs ; 160                         ;
+; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.80                        ;
-; Average LUT depth     ; 4.75                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 4.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -610,7 +468,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:27     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -620,7 +478,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Feb 19 23:43:22 2021
+    Info: Processing started: Sun Feb 21 00:33:36 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP_FINAL -c TP_FINAL
 Warning (125092): Tcl Script File PLL.qip not found
     Info (125063): set_global_assignment -name QIP_FILE PLL.qip
@@ -667,7 +525,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file i2c_cnt
 Info (12021): Found 1 design units, including 1 entities, in source file pll_i2c.v
     Info (12023): Found entity 1: PLL_I2C File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/PLL_I2C.v Line: 39
 Info (12021): Found 2 design units, including 1 entities, in source file i2c_wrd_gen.vhd
-    Info (12022): Found design unit 1: i2c_wrd_gen-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd Line: 16
+    Info (12022): Found design unit 1: i2c_wrd_gen-logic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd Line: 15
     Info (12023): Found entity 1: i2c_wrd_gen File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pll2.v
     Info (12023): Found entity 1: PLL2 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/PLL2.v Line: 39
@@ -688,72 +546,49 @@ Warning (275080): Converted elements in bus name "d_wr2" using legacy naming rul
     Warning (275081): Converted element name(s) from "d_wr2[7..0]" to "d_wr27..0"
 Warning (275080): Converted elements in bus name "d_wr3" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "d_wr3[7..0]" to "d_wr37..0"
-Warning (275008): Primitive "VCC" of instance "inst12" not used
-Warning (275008): Primitive "VCC" of instance "inst13" not used
-Warning (275008): Primitive "VCC" of instance "inst14" not used
-Warning (275008): Primitive "VCC" of instance "inst15" not used
-Warning (275008): Primitive "VCC" of instance "inst16" not used
-Warning (275008): Primitive "VCC" of instance "inst17" not used
-Warning (275008): Primitive "VCC" of instance "inst18" not used
-Warning (275008): Primitive "VCC" of instance "inst19" not used
-Warning (275008): Primitive "VCC" of instance "inst20" not used
-Warning (275008): Primitive "VCC" of instance "inst21" not used
-Warning (275008): Primitive "VCC" of instance "inst22" not used
-Warning (275008): Primitive "VCC" of instance "inst23" not used
-Warning (275008): Primitive "VCC" of instance "inst24" not used
-Warning (275008): Primitive "VCC" of instance "inst25" not used
-Warning (275008): Primitive "VCC" of instance "inst26" not used
+Warning (275008): Primitive "VCC" of instance "inst10" not used
+Warning (275008): Primitive "GND" of instance "inst11" not used
+Warning (275008): Primitive "GND" of instance "inst27" not used
+Warning (275008): Primitive "GND" of instance "inst28" not used
+Warning (275008): Primitive "GND" of instance "inst29" not used
+Warning (275008): Primitive "GND" of instance "inst30" not used
+Warning (275008): Primitive "GND" of instance "inst31" not used
+Warning (275008): Primitive "GND" of instance "inst32" not used
+Warning (275008): Primitive "GND" of instance "inst33" not used
+Warning (275008): Primitive "VCC" of instance "inst34" not used
+Warning (275008): Primitive "VCC" of instance "inst35" not used
+Warning (275008): Primitive "VCC" of instance "inst36" not used
+Warning (275008): Primitive "VCC" of instance "inst37" not used
+Warning (275008): Primitive "VCC" of instance "inst5" not used
+Warning (275008): Primitive "VCC" of instance "inst8" not used
+Warning (275008): Primitive "VCC" of instance "inst9" not used
 Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:inst"
 Info (12128): Elaborating entity "i2c_cntrl" for hierarchy "i2c_cntrl:inst3"
 Warning (10540): VHDL Signal Declaration warning at i2c_cntrl.vhd(25): used explicit default value for signal "adrs" because signal was never assigned a value File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 25
 Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(26): object "d_word2" assigned a value but never read File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 26
 Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(27): object "d_word3" assigned a value but never read File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 27
 Warning (10492): VHDL Process Statement warning at i2c_cntrl.vhd(55): signal "reset_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 55
-Info (12128): Elaborating entity "i2c_wrd_gen" for hierarchy "i2c_wrd_gen:inst2"
+Info (12128): Elaborating entity "i2c_wrd_gen" for hierarchy "i2c_wrd_gen:inst39"
 Info (12128): Elaborating entity "i2s_transceiver" for hierarchy "i2s_transceiver:inst1"
-Info (12128): Elaborating entity "delay_effect_200ms" for hierarchy "delay_effect_200ms:inst8"
+Info (12128): Elaborating entity "delay_mod" for hierarchy "delay_mod:inst42"
 Info (19000): Inferred 1 megafunctions from design logic
-    Info (276034): Inferred altshift_taps megafunction from the following design logic: "delay_effect_200ms:inst8|Delay_reg_rtl_0"
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "delay_mod:inst42|Delay_reg_rtl_0"
         Info (286033): Parameter NUMBER_OF_TAPS set to 1
-        Info (286033): Parameter TAP_DISTANCE set to 8819
-        Info (286033): Parameter WIDTH set to 16
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "delay_effect_200ms:inst8|Mult0" File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd Line: 83
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "delay_effect_200ms:inst5|Mult0" File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd Line: 83
-Info (12130): Elaborated megafunction instantiation "delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0"
-Info (12133): Instantiated megafunction "delay_effect_200ms:inst8|altshift_taps:Delay_reg_rtl_0" with the following parameter:
+        Info (286033): Parameter TAP_DISTANCE set to 4096
+        Info (286033): Parameter WIDTH set to 8
+Info (12130): Elaborated megafunction instantiation "delay_mod:inst42|altshift_taps:Delay_reg_rtl_0"
+Info (12133): Instantiated megafunction "delay_mod:inst42|altshift_taps:Delay_reg_rtl_0" with the following parameter:
     Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
-    Info (12134): Parameter "TAP_DISTANCE" = "8819"
-    Info (12134): Parameter "WIDTH" = "16"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_jbm.tdf
-    Info (12023): Found entity 1: shift_taps_jbm File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_jbm.tdf Line: 26
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ir81.tdf
-    Info (12023): Found entity 1: altsyncram_ir81 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_ir81.tdf Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file db/decode_jsa.tdf
-    Info (12023): Found entity 1: decode_jsa File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/decode_jsa.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_iob.tdf
-    Info (12023): Found entity 1: mux_iob File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/mux_iob.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_uvf.tdf
-    Info (12023): Found entity 1: cntr_uvf File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_uvf.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_bic.tdf
-    Info (12023): Found entity 1: cmpr_bic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_bic.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0" File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd Line: 83
-Info (12133): Instantiated megafunction "delay_effect_200ms:inst8|lpm_mult:Mult0" with the following parameter: File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd Line: 83
-    Info (12134): Parameter "LPM_WIDTHA" = "8"
-    Info (12134): Parameter "LPM_WIDTHB" = "8"
-    Info (12134): Parameter "LPM_WIDTHP" = "16"
-    Info (12134): Parameter "LPM_WIDTHR" = "16"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
-Info (12131): Elaborated megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.tdf Line: 228
-Info (12131): Elaborated megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lgh.tdf
-    Info (12023): Found entity 1: add_sub_lgh File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/add_sub_lgh.tdf Line: 22
-Info (12131): Elaborated megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "delay_effect_200ms:inst8|lpm_mult:Mult0" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+    Info (12134): Parameter "TAP_DISTANCE" = "4096"
+    Info (12134): Parameter "WIDTH" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_t9m.tdf
+    Info (12023): Found entity 1: shift_taps_t9m File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_t9m.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2o81.tdf
+    Info (12023): Found entity 1: altsyncram_2o81 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_2o81.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_lvf.tdf
+    Info (12023): Found entity 1: cntr_lvf File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_lvf.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_9ic.tdf
+    Info (12023): Found entity 1: cmpr_9ic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_9ic.tdf Line: 22
 Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
     Warning (13051): Converted the fanout from the open-drain buffer "i2c_master:inst|scl" to the node "i2c_master:inst|stretch" into a wire File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 51
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 47
@@ -763,15 +598,15 @@ Critical Warning (18061): Ignored Power-Up Level option on the following registe
     Critical Warning (18010): Register i2c_cntrl:inst3|i2s_en will power up to High File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 19
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 596 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 469 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 551 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 5259 megabytes
-    Info: Processing ended: Fri Feb 19 23:44:33 2021
-    Info: Elapsed time: 00:01:11
-    Info: Total CPU time (on all processors): 00:01:19
+    Info (21061): Implemented 448 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
+    Info: Peak virtual memory: 4947 megabytes
+    Info: Processing ended: Sun Feb 21 00:34:26 2021
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:00:58
 
 

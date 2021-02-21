@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("D:/Facultad/2020 2do Cuatri/Laboratorio DSP-FPGA/TP Final/output_files/") File("TP_FINAL.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/output_files/") File("TP_FINAL.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
