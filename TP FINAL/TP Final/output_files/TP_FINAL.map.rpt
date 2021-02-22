@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TP_FINAL
-Sun Feb 21 00:34:26 2021
+Mon Feb 22 04:21:12 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,22 +13,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. State Machine - |TP_FINAL|i2c_master:inst|state
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Registers Packed Into Inferred Megafunctions
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2
- 17. Parameter Settings for User Entity Instance: i2c_master:inst
- 18. Parameter Settings for User Entity Instance: i2s_transceiver:inst1
- 19. Parameter Settings for Inferred Entity Instance: delay_mod:inst42|altshift_taps:Delay_reg_rtl_0
- 20. altshift_taps Parameter Settings by Entity Instance
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  8. State Machine - |TP_FINAL|i2c_master:inst|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: i2c_master:inst
+ 15. Parameter Settings for User Entity Instance: i2s_transceiver:inst1
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -54,18 +49,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 21 00:34:25 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 22 04:21:12 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TP_FINAL                                    ;
 ; Top-level Entity Name              ; TP_FINAL                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 438                                         ;
-;     Total combinational functions  ; 395                                         ;
-;     Dedicated logic registers      ; 229                                         ;
-; Total registers                    ; 229                                         ;
+; Total logic elements               ; 19,579                                      ;
+;     Total combinational functions  ; 11,328                                      ;
+;     Dedicated logic registers      ; 8,429                                       ;
+; Total registers                    ; 8429                                        ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 32,752                                      ;
+; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -165,100 +160,78 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                    ;
-+----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; ../audio effects/hdlsrc/delay/delay_module_var.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_var.vhd ;         ;
-; ../audio effects/hdlsrc/delay/delay_module_pkg.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/delay/delay_module_pkg.vhd ;         ;
-; i2s_transceiver.vhd                                ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd                    ;         ;
-; i2C/i2c_master.vhd                                 ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd                     ;         ;
-; TP_FINAL.bdf                                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/TP_FINAL.bdf                           ;         ;
-; i2c_cntrl.vhd                                      ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd                          ;         ;
-; i2c_wrd_gen.vhd                                    ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd                        ;         ;
-; altshift_taps.tdf                                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift_taps.tdf                            ;         ;
-; altdpram.inc                                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
-; lpm_counter.inc                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc                              ;         ;
-; lpm_compare.inc                                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_compare.inc                              ;         ;
-; lpm_constant.inc                                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_constant.inc                             ;         ;
-; db/shift_taps_t9m.tdf                              ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_t9m.tdf                  ;         ;
-; db/altsyncram_2o81.tdf                             ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_2o81.tdf                 ;         ;
-; db/cntr_lvf.tdf                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_lvf.tdf                        ;         ;
-; db/cmpr_9ic.tdf                                    ; yes             ; Auto-Generated Megafunction        ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_9ic.tdf                        ;         ;
-+----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
++----------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path             ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; ../audio effects/hdlsrc/echo_8b/echo_pkg.vhd ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/echo_8b/echo_pkg.vhd ;         ;
+; i2s_transceiver.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2s_transceiver.vhd              ;         ;
+; i2C/i2c_master.vhd                           ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd               ;         ;
+; TP_FINAL.bdf                                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/TP_FINAL.bdf                     ;         ;
+; i2c_cntrl.vhd                                ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd                    ;         ;
+; i2c_wrd_gen.vhd                              ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd                  ;         ;
+; chorus.vhd                                   ; yes             ; User VHDL File                     ; C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/chorus.vhd                       ;         ;
++----------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 438          ;
-;                                             ;              ;
-; Total combinational functions               ; 395          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 160          ;
-;     -- 3 input functions                    ; 64           ;
-;     -- <=2 input functions                  ; 171          ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 287          ;
-;     -- arithmetic mode                      ; 108          ;
-;                                             ;              ;
-; Total registers                             ; 229          ;
-;     -- Dedicated logic registers            ; 229          ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 13           ;
-; Total memory bits                           ; 32752        ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; CK_50M~input ;
-; Maximum fan-out                             ; 214          ;
-; Total fan-out                               ; 2101         ;
-; Average fan-out                             ; 3.19         ;
-+---------------------------------------------+--------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Entity Name     ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |TP_FINAL                                 ; 395 (0)             ; 229 (0)                   ; 32752       ; 0            ; 0       ; 0         ; 13   ; 0            ; |TP_FINAL                                                                                                            ; TP_FINAL        ; work         ;
-;    |delay_mod:inst42|                     ; 29 (0)              ; 12 (0)                    ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42                                                                                           ; delay_mod       ; work         ;
-;       |altshift_taps:Delay_reg_rtl_0|     ; 29 (0)              ; 12 (0)                    ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0                                                             ; altshift_taps   ; work         ;
-;          |shift_taps_t9m:auto_generated|  ; 29 (0)              ; 12 (0)                    ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated                               ; shift_taps_t9m  ; work         ;
-;             |altsyncram_2o81:altsyncram2| ; 0 (0)               ; 0 (0)                     ; 32752       ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2   ; altsyncram_2o81 ; work         ;
-;             |cntr_lvf:cntr1|              ; 29 (25)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|cntr_lvf:cntr1                ; cntr_lvf        ; work         ;
-;                |cmpr_9ic:cmpr4|           ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|cntr_lvf:cntr1|cmpr_9ic:cmpr4 ; cmpr_9ic        ; work         ;
-;    |i2c_cntrl:inst3|                      ; 107 (107)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_cntrl:inst3                                                                                            ; i2c_cntrl       ; work         ;
-;    |i2c_master:inst|                      ; 81 (81)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_master:inst                                                                                            ; i2c_master      ; work         ;
-;    |i2c_wrd_gen:inst39|                   ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_wrd_gen:inst39                                                                                         ; i2c_wrd_gen     ; work         ;
-;    |i2s_transceiver:inst1|                ; 159 (159)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2s_transceiver:inst1                                                                                      ; i2s_transceiver ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimated Total logic elements              ; 19,579                       ;
+;                                             ;                              ;
+; Total combinational functions               ; 11328                        ;
+; Logic element usage by number of LUT inputs ;                              ;
+;     -- 4 input functions                    ; 11034                        ;
+;     -- 3 input functions                    ; 103                          ;
+;     -- <=2 input functions                  ; 191                          ;
+;                                             ;                              ;
+; Logic elements by mode                      ;                              ;
+;     -- normal mode                          ; 11190                        ;
+;     -- arithmetic mode                      ; 138                          ;
+;                                             ;                              ;
+; Total registers                             ; 8429                         ;
+;     -- Dedicated logic registers            ; 8429                         ;
+;     -- I/O registers                        ; 0                            ;
+;                                             ;                              ;
+; I/O pins                                    ; 13                           ;
+;                                             ;                              ;
+; Embedded Multiplier 9-bit elements          ; 0                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; i2s_transceiver:inst1|ws_int ;
+; Maximum fan-out                             ; 8221                         ;
+; Total fan-out                               ; 62058                        ;
+; Average fan-out                             ; 3.14                         ;
++---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                         ;
-+---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; Name                                                                                                                ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
-+---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4094         ; 8            ; 4094         ; 8            ; 32752 ; None ;
-+---------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-----------------+--------------+
+; |TP_FINAL                  ; 11328 (0)           ; 8429 (0)                  ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |TP_FINAL                       ; TP_FINAL        ; work         ;
+;    |chorus:inst13|         ; 5494 (5494)         ; 4116 (4116)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|chorus:inst13         ; chorus          ; work         ;
+;    |chorus:inst14|         ; 5489 (5489)         ; 4096 (4096)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|chorus:inst14         ; chorus          ; work         ;
+;    |i2c_cntrl:inst3|       ; 104 (104)           ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_cntrl:inst3       ; i2c_cntrl       ; work         ;
+;    |i2c_master:inst|       ; 80 (80)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_master:inst       ; i2c_master      ; work         ;
+;    |i2c_wrd_gen:inst39|    ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2c_wrd_gen:inst39    ; i2c_wrd_gen     ; work         ;
+;    |i2s_transceiver:inst1| ; 142 (142)           ; 115 (115)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TP_FINAL|i2s_transceiver:inst1 ; i2s_transceiver ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
@@ -279,44 +252,74 @@ Encoding Type:  One-Hot
 +----------------+------------+----------------+----------------+----------+----------+----------------+---------------+-------------+-------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+----------------------------------------+-----------------------------------------+
-; Register name                          ; Reason for Removal                      ;
-+----------------------------------------+-----------------------------------------+
-; i2c_wrd_gen:inst39|rw                  ; Stuck at GND due to stuck port data_in  ;
-; i2c_wrd_gen:inst39|d_wr3[6,7]          ; Stuck at GND due to stuck port data_in  ;
-; i2c_wrd_gen:inst39|d_wr[7]             ; Stuck at GND due to stuck port data_in  ;
-; i2c_cntrl:inst3|rw_temp                ; Stuck at GND due to stuck port data_in  ;
-; i2c_cntrl:inst3|address[0..2]          ; Stuck at GND due to stuck port data_in  ;
-; i2c_cntrl:inst3|address[3,4]           ; Stuck at VCC due to stuck port data_in  ;
-; i2c_cntrl:inst3|address[5,6]           ; Stuck at GND due to stuck port data_in  ;
-; i2c_master:inst|addr_rw[2,3,6,7]       ; Merged with i2c_master:inst|addr_rw[1]  ;
-; i2c_master:inst|addr_rw[5]             ; Merged with i2c_master:inst|addr_rw[4]  ;
-; i2c_wrd_gen:inst39|d_wr[3,6]           ; Merged with i2c_wrd_gen:inst39|d_wr[2]  ;
-; i2c_wrd_gen:inst39|d_wr3[5]            ; Merged with i2c_wrd_gen:inst39|d_wr3[4] ;
-; i2c_wrd_gen:inst39|d_wr3[2,3]          ; Merged with i2c_wrd_gen:inst39|d_wr3[0] ;
-; i2c_wrd_gen:inst39|d_wr2[2]            ; Merged with i2c_wrd_gen:inst39|d_wr2[0] ;
-; i2c_cntrl:inst3|rw_out                 ; Stuck at GND due to stuck port data_in  ;
-; i2c_master:inst|addr_rw[0]             ; Merged with i2c_master:inst|addr_rw[1]  ;
-; i2c_master:inst|addr_rw[1]             ; Stuck at GND due to stuck port data_in  ;
-; i2c_master:inst|addr_rw[4]             ; Stuck at VCC due to stuck port data_in  ;
-; Total Number of Removed Registers = 27 ;                                         ;
-+----------------------------------------+-----------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------+----------------------------------------------------+
+; Register name                             ; Reason for Removal                                 ;
++-------------------------------------------+----------------------------------------------------+
+; i2c_wrd_gen:inst39|rw                     ; Stuck at GND due to stuck port data_in             ;
+; i2c_wrd_gen:inst39|d_wr3[6,7]             ; Stuck at GND due to stuck port data_in             ;
+; i2c_wrd_gen:inst39|d_wr[7]                ; Stuck at GND due to stuck port data_in             ;
+; i2c_cntrl:inst3|rw_temp                   ; Stuck at GND due to stuck port data_in             ;
+; i2c_cntrl:inst3|address[0..2]             ; Stuck at GND due to stuck port data_in             ;
+; i2c_cntrl:inst3|address[3,4]              ; Stuck at VCC due to stuck port data_in             ;
+; i2c_cntrl:inst3|address[5,6]              ; Stuck at GND due to stuck port data_in             ;
+; chorus:inst14|\Delay_process:bool         ; Merged with chorus:inst13|\Delay_process:bool      ;
+; i2c_master:inst|addr_rw[2,3,6,7]          ; Merged with i2c_master:inst|addr_rw[1]             ;
+; i2c_master:inst|addr_rw[5]                ; Merged with i2c_master:inst|addr_rw[4]             ;
+; chorus:inst14|r_lfsr2[9]                  ; Merged with chorus:inst13|r_lfsr2[9]               ;
+; chorus:inst14|r_lfsr2[8]                  ; Merged with chorus:inst13|r_lfsr2[8]               ;
+; chorus:inst14|r_lfsr2[7]                  ; Merged with chorus:inst13|r_lfsr2[7]               ;
+; chorus:inst14|r_lfsr2[6]                  ; Merged with chorus:inst13|r_lfsr2[6]               ;
+; chorus:inst14|r_lfsr2[5]                  ; Merged with chorus:inst13|r_lfsr2[5]               ;
+; chorus:inst14|r_lfsr2[4]                  ; Merged with chorus:inst13|r_lfsr2[4]               ;
+; chorus:inst14|r_lfsr2[3]                  ; Merged with chorus:inst13|r_lfsr2[3]               ;
+; chorus:inst14|r_lfsr2[2]                  ; Merged with chorus:inst13|r_lfsr2[2]               ;
+; chorus:inst14|r_lfsr2[1]                  ; Merged with chorus:inst13|r_lfsr2[1]               ;
+; chorus:inst14|r_lfsr[9]                   ; Merged with chorus:inst13|r_lfsr[9]                ;
+; chorus:inst14|r_lfsr[8]                   ; Merged with chorus:inst13|r_lfsr[8]                ;
+; chorus:inst14|r_lfsr[7]                   ; Merged with chorus:inst13|r_lfsr[7]                ;
+; chorus:inst14|r_lfsr[6]                   ; Merged with chorus:inst13|r_lfsr[6]                ;
+; chorus:inst14|r_lfsr[5]                   ; Merged with chorus:inst13|r_lfsr[5]                ;
+; chorus:inst14|r_lfsr[4]                   ; Merged with chorus:inst13|r_lfsr[4]                ;
+; chorus:inst14|r_lfsr[3]                   ; Merged with chorus:inst13|r_lfsr[3]                ;
+; chorus:inst14|r_lfsr[2]                   ; Merged with chorus:inst13|r_lfsr[2]                ;
+; chorus:inst14|r_lfsr[1]                   ; Merged with chorus:inst13|r_lfsr[1]                ;
+; i2c_wrd_gen:inst39|d_wr[3,6]              ; Merged with i2c_wrd_gen:inst39|d_wr[2]             ;
+; i2c_wrd_gen:inst39|d_wr3[5]               ; Merged with i2c_wrd_gen:inst39|d_wr3[4]            ;
+; chorus:inst14|\Delay_process:count2[2]    ; Merged with chorus:inst13|\Delay_process:count2[2] ;
+; chorus:inst14|\Delay_process:count2[1]    ; Merged with chorus:inst13|\Delay_process:count2[1] ;
+; chorus:inst14|\Delay_process:count2[0]    ; Merged with chorus:inst13|\Delay_process:count2[0] ;
+; chorus:inst14|\Delay_process:count1[2]    ; Merged with chorus:inst13|\Delay_process:count1[2] ;
+; chorus:inst14|\Delay_process:count1[1]    ; Merged with chorus:inst13|\Delay_process:count1[1] ;
+; chorus:inst14|\Delay_process:count1[0]    ; Merged with chorus:inst13|\Delay_process:count1[0] ;
+; i2c_wrd_gen:inst39|d_wr3[2,3]             ; Merged with i2c_wrd_gen:inst39|d_wr3[0]            ;
+; i2c_wrd_gen:inst39|d_wr2[2]               ; Merged with i2c_wrd_gen:inst39|d_wr2[0]            ;
+; chorus:inst13|\Delay_process:bool         ; Stuck at GND due to stuck port data_in             ;
+; i2c_cntrl:inst3|rw_out                    ; Stuck at GND due to stuck port data_in             ;
+; i2c_master:inst|addr_rw[0]                ; Merged with i2c_master:inst|addr_rw[1]             ;
+; chorus:inst13|\Delay_process:count2[0..2] ; Lost fanout                                        ;
+; i2c_master:inst|addr_rw[1]                ; Stuck at GND due to stuck port data_in             ;
+; i2c_master:inst|addr_rw[4]                ; Stuck at VCC due to stuck port data_in             ;
+; chorus:inst13|\Delay_process:count1[2]    ; Stuck at GND due to stuck port data_in             ;
+; Total Number of Removed Registers = 57    ;                                                    ;
++-------------------------------------------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                              ;
-+----------------------------+---------------------------+-------------------------------------------------+
-; Register name              ; Reason for Removal        ; Registers Removed due to This Register          ;
-+----------------------------+---------------------------+-------------------------------------------------+
-; i2c_wrd_gen:inst39|rw      ; Stuck at GND              ; i2c_cntrl:inst3|rw_temp, i2c_cntrl:inst3|rw_out ;
-;                            ; due to stuck port data_in ;                                                 ;
-; i2c_cntrl:inst3|address[0] ; Stuck at GND              ; i2c_master:inst|addr_rw[1]                      ;
-;                            ; due to stuck port data_in ;                                                 ;
-; i2c_cntrl:inst3|address[3] ; Stuck at VCC              ; i2c_master:inst|addr_rw[4]                      ;
-;                            ; due to stuck port data_in ;                                                 ;
-+----------------------------+---------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++-----------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                                          ;
++-----------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; chorus:inst13|\Delay_process:bool ; Stuck at GND              ; chorus:inst13|\Delay_process:count2[2], chorus:inst13|\Delay_process:count2[1], ;
+;                                   ; due to stuck port data_in ; chorus:inst13|\Delay_process:count2[0]                                          ;
+; i2c_wrd_gen:inst39|rw             ; Stuck at GND              ; i2c_cntrl:inst3|rw_temp, i2c_cntrl:inst3|rw_out                                 ;
+;                                   ; due to stuck port data_in ;                                                                                 ;
+; i2c_cntrl:inst3|address[0]        ; Stuck at GND              ; i2c_master:inst|addr_rw[1]                                                      ;
+;                                   ; due to stuck port data_in ;                                                                                 ;
+; i2c_cntrl:inst3|address[3]        ; Stuck at VCC              ; i2c_master:inst|addr_rw[4]                                                      ;
+;                                   ; due to stuck port data_in ;                                                                                 ;
++-----------------------------------+---------------------------+---------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -324,12 +327,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 229   ;
+; Total registers                              ; 8429  ;
 ; Number of registers using Synchronous Clear  ; 46    ;
 ; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 140   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 147   ;
+; Number of registers using Clock Enable       ; 165   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -349,35 +352,19 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Packed Into Inferred Megafunctions                                              ;
-+-------------------------------------------+----------------------------------+------------+
-; Register Name                             ; Megafunction                     ; Type       ;
-+-------------------------------------------+----------------------------------+------------+
-; delay_mod:inst42|Delay_reg[0..4095][0..7] ; delay_mod:inst42|Delay_reg_rtl_0 ; SHIFT_TAPS ;
-+-------------------------------------------+----------------------------------+------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TP_FINAL|i2c_master:inst|data_tx[7]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |TP_FINAL|i2c_master:inst|data_tx[0]             ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TP_FINAL|i2s_transceiver:inst1|l_data_tx_int[7] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TP_FINAL|i2s_transceiver:inst1|r_data_tx_int[3] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TP_FINAL|i2c_cntrl:inst3|data_wr[5]             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TP_FINAL|i2s_transceiver:inst1|r_data_tx_int[6] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |TP_FINAL|i2c_cntrl:inst3|data_wr[0]             ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |TP_FINAL|i2c_master:inst|bit_cnt[2]             ;
+; 512:1              ; 16 bits   ; 5456 LEs      ; 5456 LEs             ; 0 LEs                  ; No         ; |TP_FINAL|chorus:inst14|Mux11                    ;
+; 512:1              ; 16 bits   ; 5456 LEs      ; 5456 LEs             ; 0 LEs                  ; No         ; |TP_FINAL|chorus:inst14|Mux3                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for delay_mod:inst42|altshift_taps:Delay_reg_rtl_0|shift_taps_t9m:auto_generated|altsyncram_2o81:altsyncram2 ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -403,63 +390,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: delay_mod:inst42|altshift_taps:Delay_reg_rtl_0 ;
-+----------------+----------------+---------------------------------------------------------------+
-; Parameter Name ; Value          ; Type                                                          ;
-+----------------+----------------+---------------------------------------------------------------+
-; WIDTH_BYTEENA  ; 1              ; Untyped                                                       ;
-; NUMBER_OF_TAPS ; 1              ; Untyped                                                       ;
-; TAP_DISTANCE   ; 4096           ; Untyped                                                       ;
-; WIDTH          ; 8              ; Untyped                                                       ;
-; POWER_UP_STATE ; CLEARED        ; Untyped                                                       ;
-; CBXI_PARAMETER ; shift_taps_t9m ; Untyped                                                       ;
-+----------------+----------------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; altshift_taps Parameter Settings by Entity Instance                         ;
-+----------------------------+------------------------------------------------+
-; Name                       ; Value                                          ;
-+----------------------------+------------------------------------------------+
-; Number of entity instances ; 1                                              ;
-; Entity Instance            ; delay_mod:inst42|altshift_taps:Delay_reg_rtl_0 ;
-;     -- NUMBER_OF_TAPS      ; 1                                              ;
-;     -- TAP_DISTANCE        ; 4096                                           ;
-;     -- WIDTH               ; 8                                              ;
-+----------------------------+------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 229                         ;
+; cycloneiii_ff         ; 8429                        ;
 ;     CLR               ; 12                          ;
 ;     CLR SCLR          ; 32                          ;
-;     ENA               ; 31                          ;
+;     ENA               ; 49                          ;
 ;     ENA CLR           ; 96                          ;
 ;     ENA SCLR          ; 14                          ;
 ;     ENA SLD           ; 6                           ;
-;     plain             ; 38                          ;
+;     plain             ; 8220                        ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 397                         ;
-;     arith             ; 108                         ;
-;         2 data inputs ; 105                         ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 289                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 61                          ;
-;         4 data inputs ; 160                         ;
-; cycloneiii_ram_block  ; 8                           ;
+; cycloneiii_lcell_comb ; 11330                       ;
+;     arith             ; 138                         ;
+;         2 data inputs ; 117                         ;
+;         3 data inputs ; 21                          ;
+;     normal            ; 11192                       ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 60                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 11034                       ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 4.82                        ;
+; Max LUT depth         ; 13.70                       ;
+; Average LUT depth     ; 10.83                       ;
 +-----------------------+-----------------------------+
 
 
@@ -468,7 +425,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:08     ;
+; Top            ; 00:00:38     ;
 +----------------+--------------+
 
 
@@ -478,12 +435,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Feb 21 00:33:36 2021
+    Info: Processing started: Mon Feb 22 04:20:01 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TP_FINAL -c TP_FINAL
 Warning (125092): Tcl Script File PLL.qip not found
     Info (125063): set_global_assignment -name QIP_FILE PLL.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 0 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/echo_8b/echo_pkg.vhd
+    Info (12022): Found design unit 1: echo_pkg File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/echo_8b/echo_pkg.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/echo_8b/echo.vhd
+    Info (12022): Found design unit 1: echo-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/echo_8b/echo.vhd Line: 53
+    Info (12023): Found entity 1: echo File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/echo_8b/echo.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/flanger_short/lfo.vhd
+    Info (12022): Found design unit 1: lfo-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/flanger_short/lfo.vhd Line: 51
+    Info (12023): Found entity 1: lfo File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/flanger_short/lfo.vhd Line: 41
+Info (12021): Found 1 design units, including 0 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/rev_completo_8bits/reverberador_completo_8b_pkg.vhd
+    Info (12022): Found design unit 1: reverberador_completo_8b_pkg File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/rev_completo_8bits/reverberador_completo_8b_pkg.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/rev_completo_8bits/reverberador_completo_8b.vhd
+    Info (12022): Found design unit 1: reverberador_completo_8b-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/rev_completo_8bits/reverberador_completo_8b.vhd Line: 53
+    Info (12023): Found entity 1: reverberador_completo_8b File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/rev_completo_8bits/reverberador_completo_8b.vhd Line: 42
+Info (12021): Found 1 design units, including 0 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/rev_completo_with_audio_backup/reverberador_completo_pkg.vhd
+    Info (12022): Found design unit 1: reverberador_completo_pkg File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/rev_completo_with_audio_backup/reverberador_completo_pkg.vhd Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/hdlsrc/rev_completo_with_audio_backup/reverberador_completo.vhd
+    Info (12022): Found design unit 1: reverberador_completo-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/rev_completo_with_audio_backup/reverberador_completo.vhd Line: 53
+    Info (12023): Found entity 1: reverberador_completo File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/hdlsrc/rev_completo_with_audio_backup/reverberador_completo.vhd Line: 42
 Info (12021): Found 1 design units, including 0 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms_pkg.vhd
     Info (12022): Found design unit 1: delay_effect_200ms_pkg File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms_pkg.vhd Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file /users/manuel/documents/github/dsp-fpgay/tp final/audio effects/delay_effect/hdlsrc/delay/delay_effect_200ms.vhd
@@ -529,6 +504,15 @@ Info (12021): Found 2 design units, including 1 entities, in source file i2c_wrd
     Info (12023): Found entity 1: i2c_wrd_gen File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_wrd_gen.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pll2.v
     Info (12023): Found entity 1: PLL2 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/PLL2.v Line: 39
+Info (12021): Found 2 design units, including 1 entities, in source file flanger.vhd
+    Info (12022): Found design unit 1: flanger-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/flanger.vhd Line: 18
+    Info (12023): Found entity 1: flanger File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/flanger.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file vibrato.vhd
+    Info (12022): Found design unit 1: vibrato-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/vibrato.vhd Line: 18
+    Info (12023): Found entity 1: vibrato File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/vibrato.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file chorus.vhd
+    Info (12022): Found design unit 1: chorus-rtl File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/chorus.vhd Line: 20
+    Info (12023): Found entity 1: chorus File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/chorus.vhd Line: 9
 Info (12127): Elaborating entity "TP_FINAL" for the top level hierarchy
 Warning (275083): Bus "d_wr2[7..0]" found using same base name as "d_wr", which might lead to a name conflict.
 Warning (275083): Bus "d_wr3[7..0]" found using same base name as "d_wr", which might lead to a name conflict.
@@ -546,22 +530,6 @@ Warning (275080): Converted elements in bus name "d_wr2" using legacy naming rul
     Warning (275081): Converted element name(s) from "d_wr2[7..0]" to "d_wr27..0"
 Warning (275080): Converted elements in bus name "d_wr3" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "d_wr3[7..0]" to "d_wr37..0"
-Warning (275008): Primitive "VCC" of instance "inst10" not used
-Warning (275008): Primitive "GND" of instance "inst11" not used
-Warning (275008): Primitive "GND" of instance "inst27" not used
-Warning (275008): Primitive "GND" of instance "inst28" not used
-Warning (275008): Primitive "GND" of instance "inst29" not used
-Warning (275008): Primitive "GND" of instance "inst30" not used
-Warning (275008): Primitive "GND" of instance "inst31" not used
-Warning (275008): Primitive "GND" of instance "inst32" not used
-Warning (275008): Primitive "GND" of instance "inst33" not used
-Warning (275008): Primitive "VCC" of instance "inst34" not used
-Warning (275008): Primitive "VCC" of instance "inst35" not used
-Warning (275008): Primitive "VCC" of instance "inst36" not used
-Warning (275008): Primitive "VCC" of instance "inst37" not used
-Warning (275008): Primitive "VCC" of instance "inst5" not used
-Warning (275008): Primitive "VCC" of instance "inst8" not used
-Warning (275008): Primitive "VCC" of instance "inst9" not used
 Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:inst"
 Info (12128): Elaborating entity "i2c_cntrl" for hierarchy "i2c_cntrl:inst3"
 Warning (10540): VHDL Signal Declaration warning at i2c_cntrl.vhd(25): used explicit default value for signal "adrs" because signal was never assigned a value File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 25
@@ -570,25 +538,7 @@ Warning (10036): Verilog HDL or VHDL warning at i2c_cntrl.vhd(27): object "d_wor
 Warning (10492): VHDL Process Statement warning at i2c_cntrl.vhd(55): signal "reset_tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 55
 Info (12128): Elaborating entity "i2c_wrd_gen" for hierarchy "i2c_wrd_gen:inst39"
 Info (12128): Elaborating entity "i2s_transceiver" for hierarchy "i2s_transceiver:inst1"
-Info (12128): Elaborating entity "delay_mod" for hierarchy "delay_mod:inst42"
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276034): Inferred altshift_taps megafunction from the following design logic: "delay_mod:inst42|Delay_reg_rtl_0"
-        Info (286033): Parameter NUMBER_OF_TAPS set to 1
-        Info (286033): Parameter TAP_DISTANCE set to 4096
-        Info (286033): Parameter WIDTH set to 8
-Info (12130): Elaborated megafunction instantiation "delay_mod:inst42|altshift_taps:Delay_reg_rtl_0"
-Info (12133): Instantiated megafunction "delay_mod:inst42|altshift_taps:Delay_reg_rtl_0" with the following parameter:
-    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
-    Info (12134): Parameter "TAP_DISTANCE" = "4096"
-    Info (12134): Parameter "WIDTH" = "8"
-Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_t9m.tdf
-    Info (12023): Found entity 1: shift_taps_t9m File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/shift_taps_t9m.tdf Line: 26
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2o81.tdf
-    Info (12023): Found entity 1: altsyncram_2o81 File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/altsyncram_2o81.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_lvf.tdf
-    Info (12023): Found entity 1: cntr_lvf File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cntr_lvf.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_9ic.tdf
-    Info (12023): Found entity 1: cmpr_9ic File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/db/cmpr_9ic.tdf Line: 22
+Info (12128): Elaborating entity "chorus" for hierarchy "chorus:inst14"
 Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
     Warning (13051): Converted the fanout from the open-drain buffer "i2c_master:inst|scl" to the node "i2c_master:inst|stretch" into a wire File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 51
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2C/i2c_master.vhd Line: 47
@@ -596,17 +546,17 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
     Critical Warning (18010): Register i2c_cntrl:inst3|i2s_en will power up to High File: C:/Users/Manuel/Documents/GitHub/dsp-fpgay/TP FINAL/TP Final/i2c_cntrl.vhd Line: 19
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 469 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 19601 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 448 logic cells
-    Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4947 megabytes
-    Info: Processing ended: Sun Feb 21 00:34:26 2021
-    Info: Elapsed time: 00:00:50
-    Info: Total CPU time (on all processors): 00:00:58
+    Info (21061): Implemented 19588 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Mon Feb 22 04:21:13 2021
+    Info: Elapsed time: 00:01:12
+    Info: Total CPU time (on all processors): 00:01:20
 
 

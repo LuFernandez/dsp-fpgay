@@ -43,10 +43,10 @@ ENTITY delay_mod IS
   PORT( clk                               :   IN    std_logic;
         reset                             :   IN    std_logic;
         clk_enable                        :   IN    std_logic;
-        In1                               :   IN    std_logic_vector(7 DOWNTO 0);  -- int16
+        In1                               :   IN    std_logic_vector(15 DOWNTO 0);  -- int16
 		  delay_sel                         :   IN    unsigned(11 DOWNTO 0);  -- int16
         ce_out                            :   OUT   std_logic;
-        Out1                              :   OUT   std_logic_vector(7 DOWNTO 0)  -- int16
+        Out1                              :   OUT   std_logic_vector(15 DOWNTO 0)  -- int16
         );
 END delay_mod;
 
@@ -55,12 +55,12 @@ ARCHITECTURE rtl OF delay_mod IS
 
   -- Signals
   SIGNAL enb                              : std_logic;
-  SIGNAL In1_signed                       : signed(7 DOWNTO 0);  -- int16
-  SIGNAL Delay_reg                        : vector_of_signed8(0 TO 4095);  -- sfix16 [65536]
-  SIGNAL Delay_out1                       : signed(7 DOWNTO 0);  -- int16
+  SIGNAL In1_signed                       : signed(15 DOWNTO 0);  -- int16
+  SIGNAL Delay_reg                        : vector_of_signed16(0 TO 4095);  -- sfix16 [65536]
+  SIGNAL Delay_out1                       : signed(15 DOWNTO 0);  -- int16
   SIGNAL attenuation_mul_temp             : signed(31 DOWNTO 0);  -- sfix32_En16
-  SIGNAL attenuation_out1                 : signed(7 DOWNTO 0);  -- int16
-  SIGNAL Sum_out1                         : signed(7 DOWNTO 0);  -- int16
+  SIGNAL attenuation_out1                 : signed(15 DOWNTO 0);  -- int16
+  SIGNAL Sum_out1                         : signed(15 DOWNTO 0);  -- int16
 
 BEGIN
   In1_signed <= signed(In1);
@@ -70,7 +70,7 @@ BEGIN
   Delay_process : PROCESS (clk, reset)
   BEGIN
     IF reset = '1' THEN
-      Delay_reg <= (OTHERS => to_signed(8#0000#, 8));
+      Delay_reg <= (OTHERS => to_signed(16#0000#, 16));
     ELSIF clk'EVENT AND clk = '1' THEN
       IF enb = '1' THEN
         Delay_reg(0) <= In1_signed;

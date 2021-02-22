@@ -47,8 +47,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "In1[7..0]" (rect 0 0 30 12)(font "Arial" ))
-		(text "In1[7..0]" (rect 21 75 51 87)(font "Arial" ))
+		(text "In1[15..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "In1[15..0]" (rect 21 75 55 87)(font "Arial" ))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
@@ -68,8 +68,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 200 48)
 		(output)
-		(text "Out1[7..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "Out1[7..0]" (rect 142 43 179 55)(font "Arial" ))
+		(text "Out1[15..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "Out1[15..0]" (rect 138 43 179 55)(font "Arial" ))
 		(line (pt 200 48)(pt 184 48)(line_width 3))
 	)
 	(drawing
